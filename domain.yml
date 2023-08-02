@@ -1,0 +1,292 @@
+version: '3.1'
+intents:
+- General_Agent_Capabilities
+- affirm
+- ask_fallback
+- bot_challenge
+- change_slot_budget
+- change_slot_currentLevelOfEducation
+- change_slot_preferredFieldOfStudy
+- change_slot_preferredLocation
+- change_slot_preferredModeOfStudy
+- change_slot_timeAvailability
+- chitchat
+- chitchat_age
+- chitchat_ask_weather
+- chitchat_bored
+- chitchat_help
+- chitchat_how_are_you
+- chitchat_introduce
+- chitchat_laugh
+- chitchat_love
+- chitchat_news
+- chitchat_sorry
+- deny
+- goodbye
+- greet
+- inform_budget
+- inform_currentLevelOfEducation
+- inform_preferredFieldOfStudy
+- inform_preferredLocation
+- inform_preferredModeOfStudy
+- inform_timeAvailability
+- provide_criteria
+- recommend_educational_path
+- thank
+entities:
+- preferredLocation
+- currentLevelOfEducation
+- timeAvailability
+- preferredModeOfStudy
+- preferredFieldOfStudy
+- budget
+slots:
+  slot_currentLevelOfEducation:
+    type: categorical
+    values:
+    - High school
+    - Under graduate
+    - Post graduate
+    - PhD
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: currentLevelOfEducation
+  slot_preferredFieldOfStudy:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: preferredFieldOfStudy
+  slot_preferredModeOfStudy:
+    type: categorical
+    values:
+    - Online
+    - Offline
+    - Any
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: preferredModeOfStudy
+  slot_preferredLocation:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: preferredLocation
+  slot_budget:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: budget
+  slot_timeAvailability:
+    type: categorical
+    values:
+    - Full time
+    - Part time
+    - Any
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: timeAvailability
+  slot_recommendationCompleted:
+    type: bool
+    mappings:
+    - type: custom
+responses:
+  utter_greet:
+  - text: Hey! How may I help you?
+  - text: Hi! How may I help you?
+  - text: Howdy! How may I be of service to you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  - text: Goodbye!
+  - text: Farewell!
+  - text: Take care!
+  - text: See you later!
+  - text: Until next time!
+  - text: Bye for now!
+  - text: Have a great day!
+  - text: Adios!
+  - text: Catch you later!
+  - text: So long!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_botcapabilities:
+  - text: I can guide you to pick an educational path in Ireland based on your interests and curated to your profile. I will need your details to get started.
+  utter_ask_recommendEducationalPathsForm_slot_currentLevelOfEducation:
+  - text: Could you please mention your current level of education?
+  - text: Can you kindly let me know your educational background?
+  - text: May I inquire about your highest level of education achieved?
+  - text: Would you mind sharing your current educational attainment?
+  - text: Could you provide details regarding your educational qualifications?
+  - text: I'm curious to know about your educational level. Could you share that with me?
+  - text: Can you please mention your educational credentials?
+  - text: I would appreciate it if you could inform me about your educational background.
+  - text: Could you kindly state your level of education?
+  - text: May I ask what level of education you have completed?
+  - text: Would you be willing to disclose your educational achievements?
+  utter_ask_recommendEducationalPathsForm_slot_preferredFieldOfStudy:
+  - text: Great! Could you please mention your preferred field of study?
+  - text: That's wonderful! Could you kindly share the field of study you prefer?
+  - text: Excellent! May I ask which specific area of study you are interested in?
+  - text: Awesome! Would you mind mentioning the field of study you have a preference for?
+  - text: Fantastic! Could you please let me know your chosen field of study?
+  - text: That's great to hear! Can you share with me the field of study you are inclined towards?
+  - text: Wonderful! May I inquire about the specific field of study that captures your interest?
+  - text: That's exciting! Could you kindly state the field of study you would like to pursue?
+  - text: Brilliant! Would you be willing to share your preferred area of study?
+  - text: Impressive! Can you please mention the field of study you have a preference for?
+  - text: That's fantastic news! May I ask which field of study you are leaning towards?
+  utter_ask_recommendEducationalPathsForm_slot_preferredModeOfStudy:
+  - text: Fantastic! {slot_preferredFieldOfStudy} is a very good field. Could you please mention your preferred mode of study (Online, Offline or any)?
+  - text: 'Excellent! {slot_preferredFieldOfStudy} is a great choice. Could you kindly let me know your preferred mode of study: online, offline, or any?'
+  - text: "That's fantastic! {slot_preferredFieldOfStudy} is a wonderful field. May I ask how you prefer to study: online, offline, or any?"
+  - text: 'Wonderful! {slot_preferredFieldOfStudy} is an excellent field to pursue. Can you please mention your preferred mode of study: online, offline, or any?'
+  - text: That's great to hear! {slot_preferredFieldOfStudy} is a very promising field. Could you share whether you prefer to study online, offline, or any?
+  - text: 'Fantastic choice with {slot_preferredFieldOfStudy}! Can you kindly specify your preferred mode of study: online, offline, or any?'
+  - text: I'm glad to hear that you're interested in {slot_preferredFieldOfStudy}. Can you please let me know if you prefer to study online, offline, or any?
+  - text: '{slot_preferredFieldOfStudy} is indeed a good field. May I inquire about your preferred mode of study: online, offline, or any?'
+  - text: That's wonderful to know! {slot_preferredFieldOfStudy} is an exciting field. Could you kindly mention whether you prefer online study, offline study, or any?
+  - text: 'Great choice with {slot_preferredFieldOfStudy}! Can you please share your preferred mode of study: online, offline, or any?'
+  - text: '{slot_preferredFieldOfStudy} is a very good field to pursue. May I ask if you prefer to study online, offline, or any?'
+  utter_ask_recommendEducationalPathsForm_slot_preferredLocation:
+  - text: Cool, {slot_preferredModeOfStudy} it is. Could you please mention your choice of location in Ireland?
+  - text: Cool! So, {slot_preferredModeOfStudy}. Now, could you kindly share your preferred location in Ireland for studying?
+  - text: That's great! {slot_preferredModeOfStudy} sounds good. Can you please mention where in Ireland you would prefer to study?
+  - text: Awesome! {slot_preferredModeOfStudy} is a good choice. May I ask which location in Ireland you have in mind for your studies?
+  - text: Excellent! {slot_preferredModeOfStudy} is the way to go. Could you kindly let me know the location in Ireland you prefer for your studies?
+  - text: Wonderful! {slot_preferredModeOfStudy} is a great option. Can you share your preferred study location in Ireland?
+  - text: That's fantastic! {slot_preferredModeOfStudy} is a good fit. May I inquire about the specific location in Ireland where you would like to study?
+  - text: Great choice with {slot_preferredModeOfStudy}! Can you kindly mention the location in Ireland you have in mind for your studies?
+  - text: Perfect! {slot_preferredModeOfStudy} is a solid decision. Could you please county your preferred study location in Ireland?
+  - text: That's cool! {slot_preferredModeOfStudy} is a great choice. Can you share the location in Ireland where you would prefer to pursue your studies?
+  - text: Awesome! {slot_preferredModeOfStudy} it is. May I ask which location in Ireland you would like to choose for your studies?
+  utter_ask_budget:
+  - text: Thank you! Could you please specify if there is any budget contraints? If yes please mention the maximum limit. If no please mention No.
+  utter_ask_recommendEducationalPathsForm_slot_timeAvailability:
+  - text: Perfect! Are you looking for a "Full time" or a "Part time" course?
+  - text: Great! Would you prefer to enroll in a full time or part time course?
+  - text: Excellent! Are you interested in pursuing a full time or part time course?
+  - text: Wonderful! Can you let me know if you're looking for a full time or part time course?
+  - text: Perfect! Are you leaning towards a full time or part time course?
+  - text: That's fantastic! Would you like to pursue a full time or part time course?
+  - text: Awesome! Are you specifically interested in a full time or part time course?
+  - text: That's great to hear! Are you considering a full time or part time course?
+  - text: Amazing! Can you please mention if you're looking for a full time or part time course?
+  - text: That's a good choice! Are you inclined towards a full time or part time course?
+  - text: Terrific! Have you decided whether you want to go for a full time or part time course?
+  utter_recommend_educational_path:
+  - text: 'Based on your preferences, I recommend the following educational paths:'
+  - text: 'Taking your preferences into account, I would recommend the following educational paths:'
+  - text: "Based on what you've shared, here are some recommended educational paths that align with your preferences:"
+  - text: 'Considering your stated preferences, I suggest exploring the following educational paths:'
+  - text: 'Tailoring the recommendations to your preferences, here are some educational paths that might interest you:'
+  - text: 'After considering your preferences, I have identified the following educational paths that could be a great fit for you:'
+  - text: 'With your preferences in mind, I have curated a list of recommended educational paths for your consideration:'
+  - text: 'Personalizing the recommendations to your preferences, here are some educational paths that I believe you might find appealing:'
+  - text: 'Matching your preferences, I have compiled the following recommended educational paths:'
+  - text: 'Taking into account your stated preferences, I recommend exploring the following educational paths as potential options:'
+  - text: 'Based on the information you provided, here are some educational paths that I believe would be worth considering:'
+  utter_no_recommendation:
+  - text: I'm sorry, but I couldn't find any educational paths that match your preferences. Please try again with different preferences.
+  utter_ask_fallback:
+  - text: I'm sorry, but I couldn't understand, could you please elaborate.
+  utter_help:
+  - text: I hope I have been of help to you.
+  utter_further_assistance:
+  - text: I hope I have been of help to you. Let me know if you need any further assistance.
+  utter_conclude:
+  - text: It was great chatting with you. All the best!
+  utter_welcome:
+  - text: You're welcome! Happy to help. Is there anything else that I can assist you with?
+  utter_affirm:
+  - text: Absolutely! I'm here to assist you.
+  utter_deny:
+  - text: No problem. Let me know if you need any further assistance.
+  utter_chitchat_ask_weather:
+  - text: The weather forecast for today is sparkly. As I am inside a computer, not sure how it is outside.
+  utter_chitchat_introduce:
+  - text: Nice to meet you! How can I assist you today?
+  utter_chitchat_how_are_you:
+  - text: I'm doing well, thank you! How about you?
+  utter_chitchat_laugh:
+  - text: Hahaha! Glad I could make you laugh.
+  utter_chitchat_love:
+  - text: Aw, thank you! I appreciate your kind words.
+  utter_chitchat_news:
+  - text: The only new is that I am curious about you and how to help you pick the right career path for you.
+  utter_chitchat_age:
+  - text: I'm an AI language model, so I don't have an age. But I'm always learning!
+  utter_chitchat_sorry:
+  - text: No worries. It happens. Let's move on.
+  utter_chitchat_bored:
+  - text: I understand. How about exploring a course or a new learning material?
+  utter_chitchat_help:
+  - text: Of course! What do you need help with? Please provide more details.
+  utter_take_your_time:
+  - text: Of course! Take your time. Let me know once you are ready.
+  utter_start_over:
+  - text: Do you want to start over?
+  utter_form1_confirmation:
+  - text: |-
+      Could you please confirm the following:
+      Your current level of education is {slot_currentLevelOfEducation}, field is {slot_preferredFieldOfStudy}, mode is {slot_preferredModeOfStudy}
+  utter_test:
+  - text: location is {slot_preferredLocation}, Your current level of education is {slot_currentLevelOfEducation}, field is {slot_preferredFieldOfStudy}, mode is {slot_preferredModeOfStudy}
+actions:
+- utter_greet
+- slots_reset
+- recommendEducationalPaths
+- utter_conclude
+- utter_goodbye
+- utter_ask_recommendEducationalPathsForm_slot_currentLevelOfEducation
+- validate_recommendEducationalPathsForm
+- utter_ask_recommendEducationalPathsForm_slot_preferredFieldOfStudy
+- utter_ask_recommendEducationalPathsForm_slot_preferredModeOfStudy
+- utter_ask_recommendEducationalPathsForm_slot_preferredLocation
+- utter_ask_recommendEducationalPathsForm_slot_timeAvailability
+- utter_ask_budget
+- utter_recommend_educational_path
+- utter_no_recommendation
+- utter_ask_fallback
+- utter_welcome
+- utter_further_assistance
+- ActionFallback
+- utter_test
+- utter_affirm
+- utter_deny
+- utter_chitchat_ask_weather
+- utter_chitchat_introduce
+- utter_chitchat_how_are_you
+- utter_chitchat_laugh
+- utter_chitchat_love
+- utter_chitchat_age
+- utter_chitchat_sorry
+- utter_chitchat_bored
+- utter_chitchat_help
+- utter_chitchat_news
+- utter_form1_confirmation
+- action_change_slot_value
+- action_validate_budget
+- utter_start_over  
+- utter_take_your_time
+forms:
+  recommendEducationalPathsForm:
+    required_slots:
+    - slot_currentLevelOfEducation
+    - slot_preferredFieldOfStudy
+    - slot_preferredModeOfStudy
+    - slot_preferredLocation
+    - slot_timeAvailability
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

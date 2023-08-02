@@ -1,0 +1,115 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say 'bot capabilities' anytime the user asks for capabilities
+  steps:
+  - intent: General_Agent_Capabilities
+  - action: utter_botcapabilities
+
+- rule: change slots currentLevelOfEducation
+  steps:
+  - intent: change_slot_currentLevelOfEducation
+  - action: action_change_slot_value
+
+- rule: change slots preferredFieldOfStudy
+  steps:
+  - intent: change_slot_preferredFieldOfStudy
+  - action: action_change_slot_value
+
+- rule: change slots preferredModeOfStudy
+  steps:
+  - intent: change_slot_preferredModeOfStudy
+  - action: action_change_slot_value
+
+- rule: change slots preferredLocation
+  steps:
+  - intent: change_slot_preferredLocation
+  - action: action_change_slot_value
+
+- rule: change slots timeAvailability
+  steps:
+  - intent: change_slot_timeAvailability
+  - action: action_change_slot_value
+
+- rule: change slots budget
+  steps:
+  - intent: change_slot_budget
+  - action: action_change_slot_value
+
+- rule: chitchat 1
+  steps:
+  - intent: chitchat_ask_weather
+  - action: utter_chitchat_ask_weather
+
+- rule: chitchat 2
+  steps:
+  - intent: chitchat_introduce
+  - action: utter_chitchat_introduce
+
+- rule: chitchat 3
+  steps:
+  - intent: chitchat_how_are_you
+  - action: utter_chitchat_how_are_you
+
+- rule: chitchat 4
+  steps:
+  - intent: chitchat_laugh
+  - action: utter_chitchat_laugh
+
+- rule: chitchat 5
+  steps:
+  - intent: chitchat_love
+  - action: utter_chitchat_love
+
+- rule: chitchat 6
+  steps:
+  - intent: chitchat_age
+  - action: utter_chitchat_age
+
+- rule: chitchat 7
+  steps:
+  - intent: chitchat_sorry
+  - action: utter_chitchat_sorry
+
+- rule: chitchat 8
+  steps:
+  - intent: chitchat_bored
+  - action: utter_chitchat_bored
+
+- rule: chitchat 9
+  steps:
+  - intent: chitchat_help
+  - action: utter_chitchat_help
+
+- rule: chitchat 10
+  steps:
+  - intent: chitchat_news
+  - action: utter_chitchat_news
+
+
+
+
+# - rule: Activate form
+#   steps:
+#   - intent: provide_criteria
+#   - action: recommendEducationalPathsForm
+#   - active_loop: recommendEducationalPathsForm
+
+# - rule: test rule
+#   steps:
+#   - intent: provide_criteria
+#   - action: recommendEducationalPathsForm
+#   - active_loop: recommendEducationalPathsForm
+#   - active_loop: null
+#   - action: recommendEducationalPaths

@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-currentLevelOfEducation",
+      "2": "I-currentLevelOfEducation",
+      "3": "L-currentLevelOfEducation",
+      "4": "U-currentLevelOfEducation",
+      "5": "B-preferredFieldOfStudy",
+      "6": "I-preferredFieldOfStudy",
+      "7": "L-preferredFieldOfStudy",
+      "8": "U-preferredFieldOfStudy",
+      "9": "B-preferredLocation",
+      "10": "I-preferredLocation",
+      "11": "L-preferredLocation",
+      "12": "U-preferredLocation",
+      "13": "B-preferredModeOfStudy",
+      "14": "I-preferredModeOfStudy",
+      "15": "L-preferredModeOfStudy",
+      "16": "U-preferredModeOfStudy",
+      "17": "B-timeAvailability",
+      "18": "I-timeAvailability",
+      "19": "L-timeAvailability",
+      "20": "U-timeAvailability",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-currentLevelOfEducation": 1,
+      "I-currentLevelOfEducation": 2,
+      "L-currentLevelOfEducation": 3,
+      "U-currentLevelOfEducation": 4,
+      "B-preferredFieldOfStudy": 5,
+      "I-preferredFieldOfStudy": 6,
+      "L-preferredFieldOfStudy": 7,
+      "U-preferredFieldOfStudy": 8,
+      "B-preferredLocation": 9,
+      "I-preferredLocation": 10,
+      "L-preferredLocation": 11,
+      "U-preferredLocation": 12,
+      "B-preferredModeOfStudy": 13,
+      "I-preferredModeOfStudy": 14,
+      "L-preferredModeOfStudy": 15,
+      "U-preferredModeOfStudy": 16,
+      "B-timeAvailability": 17,
+      "I-timeAvailability": 18,
+      "L-timeAvailability": 19,
+      "U-timeAvailability": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

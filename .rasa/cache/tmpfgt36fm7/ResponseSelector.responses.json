@@ -1,0 +1,52 @@
+{
+  "utter_chitchat/ask_weather": [
+    {
+      "text": "The weather forecast for today is sparkly. As I am inside a computer, not sure how it is outside."
+    }
+  ],
+  "utter_chitchat/introduce": [
+    {
+      "text": "Nice to meet you! How can I assist you today?"
+    }
+  ],
+  "utter_chitchat/how_are_you": [
+    {
+      "text": "I'm doing well, thank you! How about you?"
+    }
+  ],
+  "utter_chitchat/laugh": [
+    {
+      "text": "Hahaha! Glad I could make you laugh."
+    }
+  ],
+  "utter_chitchat/love": [
+    {
+      "text": "Aw, thank you! I appreciate your kind words."
+    }
+  ],
+  "utter_chitchat/news": [
+    {
+      "text": "The only new is that I am curious about you and how to help you pick the right career path for you."
+    }
+  ],
+  "utter_chitchat/age": [
+    {
+      "text": "I'm an AI language model, so I don't have an age. But I'm always learning!"
+    }
+  ],
+  "utter_chitchat/sorry": [
+    {
+      "text": "No worries. It happens. Let's move on."
+    }
+  ],
+  "utter_chitchat/bored": [
+    {
+      "text": "I understand. How about exploring a course or a new learning material?"
+    }
+  ],
+  "utter_chitchat/help": [
+    {
+      "text": "Of course! What do you need help with? Please provide more details."
+    }
+  ]
+}

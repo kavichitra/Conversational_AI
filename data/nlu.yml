@@ -1,0 +1,1840 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - morning
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+    - yea
+    - Yes
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no, thanks
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: General_Agent_Capabilities
+  examples: |
+    - Help now
+    - Do you have a list of things I can talk to you about?
+    - How do I use you?
+    - I do not know what to ask
+    - Can you please give me a list of the types of things you can help me with?
+    - How to talk to you
+    - can you tell about your strength ?
+    - Can you tell me what services you are able to help me with?
+    - Where can I find the frequently asked questions?
+    - What kinds of things can you do?
+    - What can you teach me ?
+    - What is this 4?
+    - What features are in here?
+    - What else can you help me with?
+    - What do you handle?
+    - What do you do?
+    - What can I ask you to do?
+    - What are your skills?
+    - What are you used for?
+    - What are you good at?
+    - What are you capable of?
+    - What are you able to understand?
+    - What are you able to deal with?
+    - What are my options?
+    - What are my options that you can help with?
+    - Tell me something
+    - Tell me about what kind of things you do?
+    - Is there anything you can help me with?
+    - I'd like to know what type of questions you can answer for me
+    - How can you solve my problems?
+    - How can you help me?
+    - How can I use you?
+    - Hi, what do you do?
+- intent: inform_currentLevelOfEducation
+  examples: |
+    - I am currently pursuing an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am actively working towards my [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - My educational journey involves obtaining a [baccalaureate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - The degree I am pursuing is an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} program
+    - I am enrolled in a [four-year degree]{"entity": "currentLevelOfEducation", "value": "Under graduate"} program
+    - My academic goal is to complete a [post-secondary degree]{"entity": "currentLevelOfEducation", "value": "Under graduate"}
+    - I am focused on achieving my [college]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - The qualification I am pursuing is an [undergrad]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am dedicated to achieving a [baccalaureate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - Pursuing a [four year degree]{"entity": "currentLevelOfEducation", "value": "Under graduate"} is an integral part of my educational path
+    - I am currently enrolled in a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree program
+    - My academic focus is on attaining a [B.A]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am determined to earn my [B.S]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am focused on obtaining a [B.E]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - The degree I am studying for is a [B.B.A]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am pursuing a [B.Ed]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - My goal is to achieve a [B.Sc]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am committed to obtaining a [B.Com] degree
+    - My aim is to attain a [B.Tech] degree
+    - I am currently working on my [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} diploma
+    - Pursuing a [first degree]{"entity": "currentLevelOfEducation", "value": "Under graduate"} is an important milestone for me
+    - I am dedicated to studying for my [baccalaureate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} diploma
+    - Completing a [four-year degree]{"entity": "currentLevelOfEducation", "value": "Under graduate"} is an essential part of my educational journey
+    - I am actively seeking an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} qualification
+    - My educational focus is on obtaining a [post secondary diploma]{"entity": "currentLevelOfEducation", "value": "Under graduate"}
+    - Earning a [college qualification]{"entity": "currentLevelOfEducation", "value": "Under graduate"} is my primary objective
+    - I am committed to achieving a [university diploma]{"entity": "currentLevelOfEducation", "value": "Under graduate"}
+    - I am determined to obtain an [academic qualification]{"entity": "currentLevelOfEducation", "value": "Under graduate"}
+    - Pursuing my [undergrad]{"entity": "currentLevelOfEducation", "value": "Under graduate"} diploma is a crucial step in my education
+    - I am currently completing a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} qualification
+    - My academic focus is on attaining a BA qualification
+    - I am determined to earn my BS qualification
+    - I am focused on obtaining a BE qualification
+    - The qualification I am studying for is a BBA qualification
+    - I am pursuing a BEd qualification
+    - My goal is to achieve a BSc qualification
+    - I am committed to obtaining a BCom qualification
+    - I am dedicated to achieving a BTech qualification
+    - I have a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I hold a [bachelors]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've completed my undergraduate studies and obtained a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I have a degree at the [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} level
+    - My educational background includes a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am a graduate with a [bachelors]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've successfully earned a [bachelors]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've attained a degree in my [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} studies
+    - I've accomplished my undergraduate education and obtained a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I possess an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've completed a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} program and received my degree
+    - My current level of education is an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am a holder of a [bachelors]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [computer science]{"entity": "preferredFieldOfStudy", "value": "Computer science"}
+    - I've fulfilled the requirements for a [bachelors]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've graduated with an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've successfully completed my undergraduate studies and earned a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've been awarded a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree for my academic accomplishments
+    - I've successfully finished my [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree program
+    - I've obtained a [bachelors]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree upon completing my undergraduate studies
+    - My educational attainment includes a [bachelors]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've received my [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [Geology](preferredFieldOfStudy)
+    - I completed a four-year program and earned my [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I have successfully graduated with a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [Data Science](preferredFieldOfStudy)
+    - My educational background includes the completion of an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am a proud recipient of a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [management]{"entity": "preferredFieldOfStudy", "value": "Management"}
+    - I have fulfilled the requirements for an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've obtained a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree through my undergraduate studies
+    - I've accomplished my [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} studies and obtained a degree at that level
+    - I am a graduate with a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [Statistics](preferredFieldOfStudy)
+    - I've completed a comprehensive undergraduate program leading to a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I have successfully earned a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [Cryptography](preferredFieldOfStudy)
+    - I am a holder of an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree with a major in [Biomedical Engineering](preferredFieldOfStudy)
+    - I've graduated from an accredited university with a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've completed my [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree requirements and obtained the corresponding degree
+    - I've successfully completed my undergraduate education and obtained a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am a degree holder with a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [Robotics](preferredFieldOfStudy)
+    - I've successfully concluded my undergraduate studies and obtained a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I am a graduate with an earned [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [Physics](preferredFieldOfStudy)
+    - I've fulfilled the necessary criteria to obtain an [undergraduate]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - I've completed my undergraduate program and been awarded a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree
+    - My academic journey led me to the attainment of a [bachelor's]{"entity": "currentLevelOfEducation", "value": "Under graduate"} degree in [Philosophy](preferredFieldOfStudy)
+    - I'm in [high school]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I successfully graduated from [secondary school]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've accomplished my [secondary education]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've fulfilled the requirements for [upper school]{"entity": "currentLevelOfEducation", "value": "High school"} graduation
+    - I completed my studies at the [senior school]{"entity": "currentLevelOfEducation", "value": "High school"} level
+    - I have a diploma from [college preparatory school]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've finished my preparatory [high school]{"entity": "currentLevelOfEducation", "value": "High school"} curriculum
+    - I've obtained my [gymnasium]{"entity": "currentLevelOfEducation", "value": "High school"} certificate
+    - I've successfully earned my [lyceum]{"entity": "currentLevelOfEducation", "value": "High school"} diploma
+    - I've completed my studies in the [sixth form]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've fulfilled the requirements for [vocational school]{"entity": "currentLevelOfEducation", "value": "High school"} completion
+    - I've graduated from the [academy]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've successfully obtained my [institute degree]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've successfully graduated from the [lycee]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've finished my [senior high]{"entity": "currentLevelOfEducation", "value": "High school"} studies
+    - I've successfully completed the [junior-senior high school]{"entity": "currentLevelOfEducation", "value": "High school"} program
+    - I've fulfilled the requirements for [comprehensive school]{"entity": "currentLevelOfEducation", "value": "High school"} graduation
+    - I've obtained my [public school]{"entity": "currentLevelOfEducation", "value": "High school"} diploma
+    - I've successfully completed my [private school]{"entity": "currentLevelOfEducation", "value": "High school"} education
+    - I've graduated from the [magnet school]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've successfully earned my [secondary school]{"entity": "currentLevelOfEducation", "value": "High school"} degree
+    - I've accomplished my [secondary education]{"entity": "currentLevelOfEducation", "value": "High school"} with a diploma
+    - I've fulfilled the requirements for [upper school]{"entity": "currentLevelOfEducation", "value": "High school"} completion
+    - I completed my studies at the [senior high]{"entity": "currentLevelOfEducation", "value": "High school"} level
+    - I have a college [preparatory school]{"entity": "currentLevelOfEducation", "value": "High school"} certificate
+    - I've finished my [preparatory high school]{"entity": "currentLevelOfEducation", "value": "High school"} studies
+    - I've obtained my [lycee]{"entity": "currentLevelOfEducation", "value": "High school"} diploma
+    - I've successfully earned my [gymnasium]{"entity": "currentLevelOfEducation", "value": "High school"} degree
+    - I've completed my studies in the [sixth form]{"entity": "currentLevelOfEducation", "value": "High school"} with a diploma
+    - I've fulfilled the requirements for [vocational school]{"entity": "currentLevelOfEducation", "value": "High school"} graduation
+    - I've graduated from the [academy]{"entity": "currentLevelOfEducation", "value": "High school"} with a degree
+    - I've successfully obtained my [institute]{"entity": "currentLevelOfEducation", "value": "High school"} diploma
+    - I've successfully graduated from the [lyceum]{"entity": "currentLevelOfEducation", "value": "High school"}
+    - I've finished my [senior high school]{"entity": "currentLevelOfEducation", "value": "High school"} studies with a diploma
+    - I've successfully completed the [junior-senior high school]{"entity": "currentLevelOfEducation", "value": "High school"} program and received my certificate
+    - I've fulfilled the requirements for [comprehensive school]{"entity": "currentLevelOfEducation", "value": "High school"} completion
+    - I've obtained my [public school]{"entity": "currentLevelOfEducation", "value": "High school"} degree
+    - I've successfully completed my [private school]{"entity": "currentLevelOfEducation", "value": "High school"} curriculum with a diploma
+    - I've graduated from the [magnet]{"entity": "currentLevelOfEducation", "value": "High school"} school with honors
+    - I have a [master's]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I have a [masters]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I hold a [postgraduate]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I have an [M.A]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I have an [M.S]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I obtained an [M.B.A]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I earned an [M.Ed]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I completed an [M.Sc]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I hold an [M.Tech]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I have an [M.F.A]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I received an [M.Com]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I obtained an [M.S.N]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I hold an [M.Arch]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I earned an [M.P.H]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I completed an [M.P.A]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I have an [M.L.I.S]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I hold an [M.P.T]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I have an [M.S.W]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I obtained an [M.Phil]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I possess a [Magister]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I hold a [second-cycle]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I possess a [postgraduate-level]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I completed my studies and obtained an [MA]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I have fulfilled the requirements for an [MS]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I obtained an [advanced degree]{"entity": "currentLevelOfEducation", "value": "Post graduate"} in business administration
+    - I earned a degree in education [MEd]{"entity": "currentLevelOfEducation", "value": "Post graduate"}
+    - I have a [Master of Science]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree in my field of study
+    - I completed my studies and hold an [MTech]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I possess an [MFA]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree in [Fine Arts](preferredFieldOfStudy)
+    - I received my degree in commerce [MCom]{"entity": "currentLevelOfEducation", "value": "Post graduate"}
+    - I have specialized in nursing and obtained an [MSN]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I hold a professional degree in architecture [MArch]{"entity": "currentLevelOfEducation", "value": "Post graduate"}
+    - I earned a degree in public health [MPH]{"entity": "currentLevelOfEducation", "value": "Post graduate"}
+    - I completed my studies and hold an [MPA]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree
+    - I have a degree in library and information science [MLIS]{"entity": "currentLevelOfEducation", "value": "Post graduate"}
+    - I hold a degree in physical therapy [MPT]{"entity": "currentLevelOfEducation", "value": "Post graduate"}
+    - I have a degree in social work [MSW]{"entity": "currentLevelOfEducation", "value": "Post graduate"}
+    - I possess an [advanced degree]{"entity": "currentLevelOfEducation", "value": "Post graduate"} in philosophy
+    - I hold a [Magister]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree in [Cybersecurity](preferredFieldOfStudy)
+    - I completed my [second-cycle]{"entity": "currentLevelOfEducation", "value": "Post graduate"} degree in [Applied Mathematics](preferredFieldOfStudy)
+    - I'm a [PhD](currentLevelOfEducation) candidate
+    - I have earned my [Doctor of Philosophy]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - I am a [DPhil]{"entity": "currentLevelOfEducation", "value": "PhD"} holder
+    - My academic degree is [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - I have successfully completed my [doctoral program]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - I am proud to be a recipient of a [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"} degree
+    - I hold a [Doctorate]{"entity": "currentLevelOfEducation", "value": "PhD"} in my chosen field of study
+    - I am officially recognized as a [PhD](currentLevelOfEducation) graduate
+    - I have been awarded a [doctoral]{"entity": "currentLevelOfEducation", "value": "PhD"} qualification
+    - My educational attainment includes a [PhD](currentLevelOfEducation)
+    - I am a proud holder of a [Doctoral]{"entity": "currentLevelOfEducation", "value": "PhD"} degree
+    - My academic accomplishments include a [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - I am a [Doctoral]{"entity": "currentLevelOfEducation", "value": "PhD"} scholar, specializing in my field
+    - I have achieved the status of a [Doctoral]{"entity": "currentLevelOfEducation", "value": "PhD"} candidate
+    - I am pursuing my [doctorate]{"entity": "currentLevelOfEducation", "value": "PhD"} as a Ph.D student
+    - I am currently working on my doctoral thesis for a [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - I have successfully defended my [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"} dissertation
+    - My area of expertise is as a [PhD](currentLevelOfEducation) scholar
+    - I am a researcher with a [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"} background
+    - I am a [Doctoral]{"entity": "currentLevelOfEducation", "value": "PhD"} trainee, actively conducting research
+    - As a [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"} aspirant, I am driven to advance my knowledge
+    - I have been admitted to a Doctoral program for my [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - My career path is focused on becoming a [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"} holder
+    - I am actively engaged in [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"} studies and research
+    - I am currently enrolled in a Doctoral program, pursuing my [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - My academic journey includes working towards a [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - I am a [Doctoral]{"entity": "currentLevelOfEducation", "value": "PhD"} postgraduate, conducting advanced research
+    - My dedication to learning has led me to pursue a [Ph.D]{"entity": "currentLevelOfEducation", "value": "PhD"}
+    - I am passionate about my [PhD](currentLevelOfEducation) studies and academic pursuits
+    - I am committed to achieving a [PhD](currentLevelOfEducation) in my chosen field
+    - I am proud to be a Doctoral scholar, contributing to academia
+    - My goal is to obtain a [PhD](currentLevelOfEducation), making meaningful contributions to my field
+    - I am dedicated to my [PhD](currentLevelOfEducation) research, aiming to expand knowledge
+    - I am studying at the [PhD](currentLevelOfEducation) level, furthering my expertise
+    - I am a [PhD](currentLevelOfEducation) graduate, equipped with advanced skills and knowledge
+    - I am a Doctoral academic, with a focus on research and teaching
+    - As a [PhD](currentLevelOfEducation) fellow, I engage in interdisciplinary research
+    - I am honored to be recognized as a [PhD](currentLevelOfEducation) scholar in my discipline
+    - I am pursuing a [PhD](currentLevelOfEducation) in my quest for scholarly excellence
+    - I am a [Doctoral]{"entity": "currentLevelOfEducation", "value": "PhD"} apprentice, learning from experienced researchers
+    - My career goals are aligned with achieving a [PhD](currentLevelOfEducation), contributing to the field
+    - [High school](currentLevelOfEducation)
+    - I completed [high school]{"entity": "currentLevelOfEducation", "value": "High school"}
+- intent: inform_preferredFieldOfStudy
+  examples: |
+    - I am captivated by the intricacies of [biology]{"entity": "preferredFieldOfStudy", "value": "Biology"} and have a strong desire to pursue it as my field of study, focusing on genetics and its applications in personalized medicine
+    - Exploring the wonders of [biology]{"entity": "preferredFieldOfStudy", "value": "Biology"} and its impact on the environment is a passion of mine. I am eager to study ecology and contribute to conservation efforts
+    - The field of [microbiology]{"entity": "preferredFieldOfStudy", "value": "Biology"} and its implications in disease prevention and treatment fascinates me. I am excited to delve deeper into this area
+    - I am deeply interested in [biology]{"entity": "preferredFieldOfStudy", "value": "Biology"} and its connection to neuroscience. Understanding the complexities of the human brain and its functions is my primary focus of study
+    - The natural world has always intrigued me, and I want to pursue a career in [biology]{"entity": "preferredFieldOfStudy", "value": "Biology"} to study biodiversity and contribute to sustainable practices for a better future
+    - Genetics and biotechnology have revolutionized the field of [biology]{"entity": "preferredFieldOfStudy", "value": "Biology"}, and I am enthusiastic about exploring these areas to develop innovative solutions for human health and agriculture
+    - I am passionate about marine [biology]{"entity": "preferredFieldOfStudy", "value": "Biology"} and preserving our oceans' ecosystems. By studying marine biology, I hope to make a meaningful impact on marine conservation
+    - [Chemistry](preferredFieldOfStudy) has always fascinated me, and I am eager to pursue it as my field of study, focusing on organic chemistry and its applications in drug discovery
+    - The intricate world of chemical reactions and their impact on our daily lives intrigues me. I am passionate about studying physical [chemistry]{"entity": "preferredFieldOfStudy", "value": "Chemistry"} and its role in understanding energy transformations
+    - I have a deep interest in [chemistry]{"entity": "preferredFieldOfStudy", "value": "Chemistry"}, particularly in the field of analytical chemistry, where I can apply my skills to solve complex problems and contribute to scientific advancements
+    - Exploring the mysteries of inorganic chemistry and its applications in materials science and catalysis is a driving force behind my desire to study [chemistry]{"entity": "preferredFieldOfStudy", "value": "Chemistry"}
+    - I am drawn to the field of environmental [chemistry]{"entity": "preferredFieldOfStudy", "value": "Chemistry"}, where I can explore the interactions between chemicals and the environment and work towards sustainable solutions
+    - The study of [biochemistry]{"entity": "preferredFieldOfStudy", "value": "Chemistry"} and its connection to the human body and diseases is a field that captivates me
+    - I am excited to contribute to biomedical research through my understanding of [chemistry]{"entity": "preferredFieldOfStudy", "value": "Chemistry"}
+    - I am passionate about physical and theoretical [chemistry]{"entity": "preferredFieldOfStudy", "value": "Chemistry"}, where I can explore the fundamental principles governing chemical phenomena and contribute to cutting-edge research in the field
+    - [Physics](preferredFieldOfStudy) has always intrigued me, and I am enthusiastic about pursuing it as my field of study, focusing on theoretical physics and exploring the mysteries of the universe
+    - I am deeply fascinated by the laws of motion and the fundamental principles of [physics]{"entity": "preferredFieldOfStudy", "value": "Physics"}. Studying classical mechanics and its applications is a passion of mine
+    - The field of quantum [physics]{"entity": "preferredFieldOfStudy", "value": "Physics"} captivates me, and I am eager to delve deeper into the world of subatomic particles and quantum phenomena
+    - I am drawn to the field of [astrophysics]{"entity": "preferredFieldOfStudy", "value": "Physics"}, where I can explore the mysteries of the cosmos, study celestial objects, and contribute to our understanding of the universe
+    - Exploring the interdisciplinary field of [biophysics]{"entity": "preferredFieldOfStudy", "value": "Physics"} and understanding the physical principles behind biological processes is an area of physics that greatly interests me
+    - Condensed matter [physics]{"entity": "preferredFieldOfStudy", "value": "Physics"}, with its focus on studying the properties of materials and their interactions, is a field I am passionate about and eager to contribute to
+    - The realm of particle [physics]{"entity": "preferredFieldOfStudy", "value": "Physics"} and high-energy physics fascinates me, and I am driven to study the fundamental particles and forces that govern the universe
+    - [Environmental science](preferredFieldOfStudy) has always been a passion of mine, and I am eager to pursue it as my field of study, focusing on sustainable resource management and conservation
+    - I am deeply interested in studying the intricate connections between ecosystems and human activities. [environmental science]{"entity": "preferredFieldOfStudy", "value": "Environmental science"} provides me with the tools to address environmental challenges and promote sustainable practices
+    - The field of environmental chemistry captivates me, as it allows me to explore the impact of pollutants on the environment and develop solutions to mitigate their effects
+    - I am drawn to the interdisciplinary nature of [environmental science]{"entity": "preferredFieldOfStudy", "value": "Environmental science"}, where I can integrate knowledge from various fields to address pressing environmental issues such as climate change and biodiversity loss
+    - I am enthusiastic about studying [environmental]{"entity": "preferredFieldOfStudy", "value": "Environmental science"} policy and planning, as it enables me to influence environmental decision-making and advocate for sustainable development
+    - The study of environmental toxicology and its effects on ecosystems and human health is an area of [environmental science]{"entity": "preferredFieldOfStudy", "value": "Environmental science"} that deeply interests me. I want to contribute to the identification and mitigation of environmental hazards
+    - Exploring the field of environmental microbiology and understanding the role of microorganisms in nutrient cycling and pollution remediation is a fascinating aspect of [environmental science]{"entity": "preferredFieldOfStudy", "value": "Environmental science"} that I am passionate about
+    - I have a deep interest in observational [astronomy]{"entity": "preferredFieldOfStudy", "value": "Astronomy"} and exploring celestial objects using telescopes and advanced imaging techniques
+    - The field of planetary [astronomy]{"entity": "preferredFieldOfStudy", "value": "Astronomy"} captivates me, as it allows me to study the formation, composition, and dynamics of planets and moons
+    - I am drawn to the interdisciplinary nature of [astrochemistry]{"entity": "preferredFieldOfStudy", "value": "Astronomy"}, where I can investigate the chemical processes occurring in space and their implications for astrobiology
+    - I am enthusiastic about [cosmology]{"entity": "preferredFieldOfStudy", "value": "Astronomy"} and understanding the origin, evolution, and large-scale structure of the universe
+    - The study of galactic [astronomy]{"entity": "preferredFieldOfStudy", "value": "Astronomy"} and exploring the properties and
+    - The interactions of galaxies in the vast cosmic landscape which is an area of [astronomy]{"entity": "preferredFieldOfStudy", "value": "Astronomy"} that greatly interests me
+    - I am passionate about [astroinformatics]{"entity": "preferredFieldOfStudy", "value": "Astronomy"}, where I can analyze and model astronomical data
+    - Geophysics and understanding Earth's physical properties and processes, such as seismic activity and magnetic fields, is an area of [geology]{"entity": "preferredFieldOfStudy", "value": "Geology"} that captivates me
+    - I have a strong interest in studying structural [geology]{"entity": "preferredFieldOfStudy", "value": "Geology"} and exploring the deformation and arrangement of rocks to understand Earth's tectonic history
+    - The field of environmental geoscience intrigues me, as it allows me to investigate the interactions between Earth systems and human activities, focusing on sustainability and resource management
+    - I am fascinated by the study of [petrology]{"entity": "preferredFieldOfStudy", "value": "Geology"}, where I can examine the origin, composition, and transformation of rocks and minerals
+    - I am enthusiastic about [geomorphology]{"entity": "preferredFieldOfStudy", "value": "Geology"} and understanding the processes shaping Earth's landforms, such as erosion, weathering, and deposition
+    - The study of hydrogeology and investigating the distribution and movement of groundwater is an area of [geology]{"entity": "preferredFieldOfStudy", "value": "Geology"} that deeply interests me
+    - I have a keen interest in exploring economic [geology]{"entity": "preferredFieldOfStudy", "value": "Geology"} and studying the formation, extraction, and utilization of Earth's mineral and energy resources
+    - Cognitive [neuroscience]{"entity": "preferredFieldOfStudy", "value": "Neuroscience"} and unraveling the neural mechanisms underlying human cognition, attention, and memory is a fascinating pursuit for me
+    - I am passionate about cellular [neuroscience]{"entity": "preferredFieldOfStudy", "value": "Neuroscience"} and studying the structure and function of neurons to comprehend the complexity of the brain
+    - The field of [neuropsychology]{"entity": "preferredFieldOfStudy", "value": "Neuroscience"} captivates me, as it allows me to explore the relationship between brain function and behavior in individuals with neurological disorders
+    - I am drawn to computational [neuroscience]{"entity": "preferredFieldOfStudy", "value": "Neuroscience"} and using mathematical models and simulations to understand brain processes and information processing
+    - I have a deep interest in developmental [neuroscience]{"entity": "preferredFieldOfStudy", "value": "Neuroscience"} and studying the maturation and plasticity of the brain across the lifespan
+    - The study of neuropharmacology and investigating the effects of drugs on the nervous system and behavior is an area of [neuroscience]{"entity": "preferredFieldOfStudy", "value": "Neuroscience"} that greatly interests me
+    - I am enthusiastic about systems [neuroscience]{"entity": "preferredFieldOfStudy", "value": "Neuroscience"} and exploring how different brain regions interact and contribute to various cognitive and sensory functions
+    - I'm interested in [computer science]{"entity": "preferredFieldOfStudy", "value": "Computer science"}
+    - I have a strong interest in pursuing [computer science]{"entity": "preferredFieldOfStudy", "value": "Computer science"} as my field of study
+    - I am enthusiastic about the prospect of studying [computer science]{"entity": "preferredFieldOfStudy", "value": "Computer science"}
+    - [Computer science](preferredFieldOfStudy) has captured my fascination, and I want to delve deeper into its concepts and applications
+    - I am passionate about [computer science]{"entity": "preferredFieldOfStudy", "value": "Computer science"} and eager to embark on a journey of learning and exploration in this field
+    - The world of [computer science]{"entity": "preferredFieldOfStudy", "value": "Computer science"} intrigues me, and I am drawn to its complexities and innovative possibilities
+    - I find great joy in studying [computer science]{"entity": "preferredFieldOfStudy", "value": "Computer science"} and am excited to further my knowledge in this area
+    - [Computer science](preferredFieldOfStudy) resonates with me, and I am eager to immerse myself in its theories and practical applications
+    - I am driven to pursue a career in [Information Technology](preferredFieldOfStudy) and contribute to the innovation and advancements within the field
+    - My aspirations lie in pursuing [Information Technology](preferredFieldOfStudy) as my chosen profession, and I am excited to embark on this journey
+    - I have a deep interest in [Information Technology](preferredFieldOfStudy) and am committed to pursuing it as a fulfilling and rewarding career
+    - I aspire to forge a successful career path in [Information Technology](preferredFieldOfStudy) and become a leading professional in the industry
+    - My goal is to establish a fulfilling career in [IT]{"entity": "preferredFieldOfStudy", "value": "Information Technology"} and make significant contributions to the ever-evolving technological landscape
+    - I am driven to excel in the field of [Information Technology](preferredFieldOfStudy) and leave a lasting impact through my expertise and innovation
+    - Building a rewarding career in [IT]{"entity": "preferredFieldOfStudy", "value": "Information Technology"} is my ambition, and I am committed to continuous learning and growth in this dynamic field
+    - I am passionate about [software]{"entity": "preferredFieldOfStudy", "value": "Software"} testing and quality assurance, where I can ensure the reliability and functionality of software systems through rigorous testing
+    - The field of [software]{"entity": "preferredFieldOfStudy", "value": "Software"} architecture captivates me, as I am drawn to designing and structuring software systems to meet specific requirements and scalability needs
+    - I have a strong interest in studying agile [software]{"entity": "preferredFieldOfStudy", "value": "Software"} development methodologies and embracing iterative and collaborative approaches to deliver high-quality software
+    - I am fascinated by the study of [software]{"entity": "preferredFieldOfStudy", "value": "Software"} maintenance and evolution, where I can optimize and enhance existing software systems to meet evolving user needs
+    - I am enthusiastic about exploring the field of [software]{"entity": "preferredFieldOfStudy", "value": "Software"} project management and leading teams to successfully execute software development projects
+    - The study of [software]{"entity": "preferredFieldOfStudy", "value": "Software"} requirements engineering intrigues me, as I am driven to elicit, analyze, and document software requirements to ensure project success
+    - I have a keen interest in [software]{"entity": "preferredFieldOfStudy", "value": "Software"} verification and validation, where I can employ techniques to ensure that software systems meet the specified requirements
+    - I am passionate about exploratory [data analysis]{"entity": "preferredFieldOfStudy", "value": "Data Science"}, where I can uncover patterns and trends in datasets to derive valuable insights
+    - The field of [machine learning]{"entity": "preferredFieldOfStudy", "value": "Data Science"} captivates me, as I am drawn to developing algorithms and models that can learn from data and make accurate predictions
+    - I have a strong interest in studying statistical modeling and hypothesis testing, where I can draw meaningful conclusions from [data]{"entity": "preferredFieldOfStudy", "value": "Data Science"} and make data-driven decisions
+    - I am fascinated by the study of [data visualization]{"entity": "preferredFieldOfStudy", "value": "Data Science"} and communication, where I can present complex data in a visually compelling and understandable manner
+    - I am enthusiastic about exploring the field of [natural language processing]{"entity": "preferredFieldOfStudy", "value": "Data Science"} and understanding how to analyze and generate human language using algorithms
+    - The study of big [data analytics]{"entity": "preferredFieldOfStudy", "value": "Data Science"} intrigues me, as I am driven to extract insights from large and complex datasets using advanced computational techniques
+    - I have a keen interest in studying [data mining]{"entity": "preferredFieldOfStudy", "value": "Data Science"} and pattern recognition, where I can discover hidden patterns and structures in data for various applications
+    - I am passionate about studying [neural networks]{"entity": "preferredFieldOfStudy", "value": "Artificial Intelligence"} and deep learning, where I can develop models that can mimic human intelligence and perform complex tasks
+    - The field of [computer vision]{"entity": "preferredFieldOfStudy", "value": "Artificial Intelligence"} captivates me, as I am fascinated by the study of algorithms that can extract meaningful information from visual data
+    - I have a strong interest in natural language processing and understanding how [AI]{"entity": "preferredFieldOfStudy", "value": "Artificial Intelligence"} systems can comprehend and generate human language
+    - I am drawn to the study of reinforcement learning, where I can develop [AI]{"entity": "preferredFieldOfStudy", "value": "Artificial Intelligence"} agents that can learn and make decisions in dynamic and uncertain environments
+    - The field of [Artificial Intelligence](preferredFieldOfStudy) intrigues me, as I am driven to develop intelligent systems that can interact with and adapt to human beings
+    - I am enthusiastic about exploring the field of [AI]{"entity": "preferredFieldOfStudy", "value": "Artificial Intelligence"} ethics and understanding the societal impact and ethical considerations of AI technologies
+    - I have a keen interest in studying knowledge representation and reasoning, where I can develop [Artificial Intelligence](preferredFieldOfStudy) systems that can understand and manipulate complex knowledge
+    - I am passionate about studying [robotic]{"entity": "preferredFieldOfStudy", "value": "Robotics"} perception and understanding how robots can perceive and interpret their environment through sensor data
+    - The field of [robot]{"entity": "preferredFieldOfStudy", "value": "Robotics"} motion planning captivates me, as I am drawn to developing algorithms that enable robots to navigate and interact in complex environments
+    - I have a strong interest in studying [robot]{"entity": "preferredFieldOfStudy", "value": "Robotics"} control systems, where I can design and implement algorithms to enable precise and efficient robot movements
+    - I am fascinated by the study of human-robot interaction and understanding how [robots]{"entity": "preferredFieldOfStudy", "value": "Robotics"} can effectively communicate and collaborate with humans
+    - I am enthusiastic about exploring the field of swarm robotics and understanding how a group of [robots]{"entity": "preferredFieldOfStudy", "value": "Robotics"} can work together to achieve collective goals
+    - The study of robot learning and adaptation intrigues me, as I am driven to develop [robots]{"entity": "preferredFieldOfStudy", "value": "Robotics"} that can learn from their experiences and adapt to new situations
+    - I have a keen interest in studying [robot]{"entity": "preferredFieldOfStudy", "value": "Robotics"} ethics and understanding the ethical considerations and societal impact of autonomous robotic systems
+    - I am passionate about studying network [security]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"} and understanding how to protect computer networks from unauthorized access threats
+    - The field of ethical hacking captivates me, as I am drawn to understanding the vulnerabilities of systems and using that knowledge to improve [security]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"}
+    - I have a strong interest in developing [secure algorithms]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"} and protocols for data confidentiality and integrity
+    - I am fascinated by the study of digital forensics and understanding how to investigate and analyze digital evidence in [cybercrime]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"} investigations
+    - I am enthusiastic about exploring the field of security management and understanding how to develop and implement effective [security policies]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"} and procedures
+    - The study of [secure software]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"} development intrigues me
+    - I am driven to design and code software systems with built-in [security]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"} features
+    - I have a keen interest in studying threat intelligence and understanding how to identify and respond to emerging [cyber]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"} threats
+    - I am intrigued by [Civil Engineering](preferredFieldOfStudy), as it offers the opportunity to create sustainable and resilient infrastructure that benefits society
+    - My interest lies in [Civil Engg]{"entity": "preferredFieldOfStudy", "value": "Civil Engineering"}, where I can apply my problem-solving skills to address challenges in urban planning and construction
+    - [Civil Engineering](preferredFieldOfStudy) has caught my attention, and I am eager to contribute to projects that improve transportation and water resource management
+    - The field of [Civil Engineering](preferredFieldOfStudy) captivates me, as I am drawn to the complexities of designing and executing large-scale construction projects
+    - I am passionate about [Civil Engg]{"entity": "preferredFieldOfStudy", "value": "Civil Engineering"}, as it allows me to combine creativity and engineering principles to shape the world around us
+    - The challenges presented in [Civil Engineering](preferredFieldOfStudy) motivate me, and I am excited to be part of building sustainable cities and infrastructure
+    - I see [Civil Engineering](preferredFieldOfStudy) as a way to make a tangible impact on society, and I am enthusiastic about exploring various construction techniques and materials
+    - [Mechanical Engineering](preferredFieldOfStudy) sparks my curiosity, as I am fascinated by the study of motion, energy, and mechanical systems
+    - I have a keen interest in [Mechanical Engg]{"entity": "preferredFieldOfStudy", "value": "Mechanical Engineering"}, where I can design and develop innovative machines and devices that improve our lives
+    - The field of [Mechanical Engineering](preferredFieldOfStudy) captivates me, as I am drawn to exploring the principles of thermodynamics and fluid mechanics
+    - I am passionate about [Mechanical Engineering](preferredFieldOfStudy), as it offers opportunities to work on projects ranging from robotics to renewable energy
+    - I am enthusiastic about [Mechanical Engineering](preferredFieldOfStudy), as I can apply my engineering knowledge to design efficient and sustainable systems
+    - The challenges presented in [Mechanical Engg]{"entity": "preferredFieldOfStudy", "value": "Mechanical Engineering"} excite me, and I am eager to contribute to cutting-edge advancements in the field
+    - I see [Mechanical Engineering](preferredFieldOfStudy) as a way to be at the forefront of technological innovation, shaping the future with inventive solutions
+    - [Electrical Engineering](preferredFieldOfStudy) sparks my interest, as I am fascinated by the study of electronics, telecommunications, and power systems
+    - I have a keen interest in [Electrical Engg]{"entity": "preferredFieldOfStudy", "value": "Electrical Engineering"}, where I can work on renewable energy projects and smart grid technologies
+    - The field of [Electrical Engineering](preferredFieldOfStudy) captivates me, as I am drawn to exploring the principles of electromagnetism and signal processing
+    - I am passionate about [Electrical Engg]{"entity": "preferredFieldOfStudy", "value": "Electrical Engineering"}, as it offers opportunities to develop innovative solutions for the digital age
+    - I am enthusiastic about [Electrical Engineering](preferredFieldOfStudy), as I can apply my engineering knowledge to design efficient and sustainable electrical systems
+    - The challenges presented in [Electrical Engg]{"entity": "preferredFieldOfStudy", "value": "Electrical Engineering"} excite me, and I am eager to contribute to advancements in renewable energy technologies
+    - I see [Electrical Engineering](preferredFieldOfStudy) as a way to shape the future of technology, revolutionizing how we generate and utilize electricity
+    - [Chemical Engg]{"entity": "preferredFieldOfStudy", "value": "Chemical Engineering"} sparks my curiosity, as I am fascinated by the study of chemical processes and material transformations
+    - I have a keen interest in [Chemical Engineering](preferredFieldOfStudy), where I can work on projects related to environmental sustainability and clean energy
+    - The field of [Chemical Engineering](preferredFieldOfStudy) captivates me, as I am drawn to exploring the principles of mass transfer and reaction kinetics
+    - I am passionate about [Chemical Engg]{"entity": "preferredFieldOfStudy", "value": "Chemical Engineering"}, as it offers opportunities to develop processes that benefit industries and the environment
+    - I am enthusiastic about [Chemical Engineering](preferredFieldOfStudy), as I can apply my engineering knowledge to design efficient and safe chemical plants
+    - The challenges presented in [Chemical Engineering](preferredFieldOfStudy) excite me, and I am eager to contribute to advancements in green and sustainable technologies
+    - I see [Chemical Engg]{"entity": "preferredFieldOfStudy", "value": "Chemical Engineering"} as a way to make a positive impact on society, addressing global challenges through innovative chemical solutions
+    - [Aerospace Engineering](preferredFieldOfStudy) sparks my interest, as I am fascinated by the study of aircraft and spacecraft design and aerodynamics
+    - I have a keen interest in [Aerospace Engineering](preferredFieldOfStudy), where I can work on projects related to space exploration and cutting-edge aviation
+    - The field of [Aerospace Engineering](preferredFieldOfStudy) captivates me, as I am drawn to exploring the principles of fluid dynamics and structural analysis
+    - I am passionate about [Aerospace Engg]{"entity": "preferredFieldOfStudy", "value": "Aerospace Engineering"}, as it offers opportunities to push the boundaries of human exploration beyond Earth
+    - I am enthusiastic about [Aerospace Engineering](preferredFieldOfStudy), as I can apply my engineering knowledge to design efficient and advanced aerospace systems
+    - The challenges presented in [Aerospace Engg]{"entity": "preferredFieldOfStudy", "value": "Aerospace Engineering"} excite me, and I am eager to contribute to advancements in space technology
+    - I see [Aerospace Engineering](preferredFieldOfStudy) as a way to be part of humanity's quest for knowledge beyond our planet, shaping the future of space exploration
+    - [Biomedical Engineering](preferredFieldOfStudy) sparks my curiosity, as I am fascinated by the intersection of engineering and medicine to improve healthcare
+    - I have a keen interest in [Biomedical Engineering](preferredFieldOfStudy), where I can work on projects related to medical devices and prosthetics
+    - The field of [Biomedical Engg]{"entity": "preferredFieldOfStudy", "value": "Biomedical Engineering"} captivates me, as I am drawn to exploring the principles of biomechanics and medical imaging
+    - I am passionate about [Biomedical Engg]{"entity": "preferredFieldOfStudy", "value": "Biomedical Engineering"}, as it offers opportunities to develop technologies that enhance human health and well-being
+    - I am enthusiastic about [Biomedical Engineering](preferredFieldOfStudy), as I can apply my engineering knowledge to create innovative solutions for healthcare challenges
+    - The challenges presented in [Biomedical Engineering](preferredFieldOfStudy) excite me, and I am eager to contribute to advancements in medical technology
+    - I see [Biomedical Engineering](preferredFieldOfStudy) as a way to make a positive impact on people's lives, improving healthcare outcomes through engineering solutions
+    - [Industrial Engg]{"entity": "preferredFieldOfStudy", "value": "Industrial Engineering"} sparks my interest, as I am fascinated by the study of optimization and efficiency in complex systems
+    - I have a keen interest in [Industrial Engineering](preferredFieldOfStudy), where I can work on projects related to supply chain management and process improvement
+    - The field of [Industrial Engineering](preferredFieldOfStudy) captivates me, as I am drawn to exploring the principles of operations research and quality control
+    - I am passionate about [Industrial Engg]{"entity": "preferredFieldOfStudy", "value": "Industrial Engineering"}, as it offers opportunities to streamline processes and reduce waste in various industries
+    - I am enthusiastic about [Industrial Engineering](preferredFieldOfStudy), as I can apply my engineering knowledge to design efficient and cost-effective systems
+    - The challenges presented in [Industrial Engg]{"entity": "preferredFieldOfStudy", "value": "Industrial Engineering"} excite me, and I am eager to contribute to advancements in manufacturing and logistics
+    - I see [Industrial Engineering](preferredFieldOfStudy) as a way to optimize and enhance the efficiency of industries, contributing to economic growth and sustainability
+    - I am captivated by [Pure Mathematics](preferredFieldOfStudy), where I can explore abstract concepts and mathematical theories at their core
+    - My passion lies in [Pure Math]{"entity": "preferredFieldOfStudy", "value": "Pure Mathematics"}, as I am driven to unravel the elegance and beauty of mathematical proofs and theorems
+    - [Pure Mathematics](preferredFieldOfStudy) has piqued my interest, and I am eager to dive deep into the realm of number theory and algebraic structures
+    - I am enthusiastic about [Pure Math]{"entity": "preferredFieldOfStudy", "value": "Pure Mathematics"}, as it allows me to delve into the intricacies of mathematical analysis and abstract algebra
+    - The field of [Pure Mathematics](preferredFieldOfStudy) intrigues me, and I am drawn to exploring the mysteries of mathematical logic and set theory
+    - I find great joy in studying [Pure Mathematics](preferredFieldOfStudy), as I can immerse myself in the foundations of calculus and differential equations
+    - [Pure Math]{"entity": "preferredFieldOfStudy", "value": "Pure Mathematics"} resonates with me, and I am eager to expand my knowledge in areas such as topology and mathematical logic
+    - [Applied Mathematics](preferredFieldOfStudy) fascinates me, as I am interested in applying mathematical principles to real-world problems and scientific phenomena
+    - My interest lies in [Applied Mathematics](preferredFieldOfStudy), where I can use mathematical models to solve complex engineering and physical systems
+    - [Applied Mathematics](preferredFieldOfStudy) has captured my attention, and I am excited to explore the applications of mathematical algorithms in various fields
+    - I am passionate about [Applied Mathematics](preferredFieldOfStudy), as it offers opportunities to develop predictive models and optimize processes in industries
+    - I am enthusiastic about [Applied Mathematics](preferredFieldOfStudy), as I can apply my mathematical skills to analyze data and make informed decisions
+    - The field of [Applied Mathematics](preferredFieldOfStudy) intrigues me, and I am drawn to using mathematical tools to understand natural and social phenomena
+    - I see great potential in [Applied Mathematics](preferredFieldOfStudy), and I am eager to contribute to cutting-edge research and technological advancements
+    - [Statistics](preferredFieldOfStudy) sparks my curiosity, as I am fascinated by the science of data analysis and probability theory
+    - I have a keen interest in [Statistics](preferredFieldOfStudy), where I can use statistical methods to draw meaningful conclusions from data sets
+    - [Statistics](preferredFieldOfStudy) has captivated me, and I am eager to explore the world of inferential statistics and experimental design
+    - I am passionate about [Statistics](preferredFieldOfStudy), as it offers opportunities to analyze trends and patterns in diverse datasets
+    - I am enthusiastic about [Statistics](preferredFieldOfStudy), as I can apply statistical techniques to solve real-world problems and make data-driven decisions
+    - The field of [Statistics](preferredFieldOfStudy) intrigues me, and I am drawn to using data analysis to support research and decision-making processes
+    - I see great value in [Statistics](preferredFieldOfStudy), and I am eager to contribute to the accurate interpretation of data in various fields
+    - [Operations Research](preferredFieldOfStudy) sparks my interest, as I am fascinated by the study of optimizing complex systems and decision-making processes
+    - I have a keen interest in [Operations Research](preferredFieldOfStudy), where I can use mathematical models to improve efficiency and resource allocation
+    - [Operations Research](preferredFieldOfStudy) has caught my attention, and I am excited to explore the applications of mathematical optimization in business and industry
+    - I am passionate about [Operations Research](preferredFieldOfStudy), as it offers opportunities to apply analytical methods to solve logistical challenges
+    - I am enthusiastic about [Operations Research](preferredFieldOfStudy), as I can use mathematical programming to find optimal solutions in diverse scenarios
+    - The field of [Operations Research](preferredFieldOfStudy) intrigues me, and I am drawn to using quantitative analysis to optimize operations and supply chains
+    - I see great potential in [Operations Research](preferredFieldOfStudy), and I am eager to contribute to improved decision-making processes in various sectors
+    - [Mathematical Physics](preferredFieldOfStudy) sparks my curiosity, as I am fascinated by the interplay of mathematics and physical principles in theoretical physics
+    - I have a keen interest in [Mathematical Physics](preferredFieldOfStudy), where I can use mathematical formalism to describe natural phenomena
+    - [Mathematical Physics](preferredFieldOfStudy) has captivated me, and I am excited to explore the applications of mathematical methods in quantum mechanics
+    - I am passionate about [Mathematical Physics](preferredFieldOfStudy), as it offers opportunities to develop mathematical models for fundamental physical laws
+    - I am enthusiastic about [Mathematical Physics](preferredFieldOfStudy), as I can apply advanced mathematical techniques to study complex physical systems
+    - The field of [Mathematical Physics](preferredFieldOfStudy) intrigues me, and I am drawn to using mathematical tools to understand the fundamental forces of the universe
+    - I see great potential in [Mathematical Physics](preferredFieldOfStudy), and I am eager to contribute to the theoretical understanding of fundamental physics
+    - [Cryptography](preferredFieldOfStudy) sparks my interest, as I am fascinated by the study of secure communication and data encryption
+    - I have a keen interest in [Cryptography](preferredFieldOfStudy), where I can use mathematical algorithms to protect sensitive information
+    - [Cryptography](preferredFieldOfStudy) has caught my attention, and I am excited to explore the applications of encryption methods in cybersecurity
+    - I am passionate about [Cryptography](preferredFieldOfStudy), as it offers opportunities to develop secure protocols for information transmission
+    - I am enthusiastic about [Cryptography](preferredFieldOfStudy), as I can apply mathematical principles to ensure confidentiality and integrity of data
+    - The field of [Cryptography](preferredFieldOfStudy) intrigues me, and I am drawn to using mathematical techniques to safeguard digital communication
+    - I see great potential in [Cryptography](preferredFieldOfStudy), and I am eager to contribute to the development of advanced encryption methods for secure communication
+    - [Literature](preferredFieldOfStudy) captivates me, as I am drawn to the world of storytelling and exploring diverse human experiences through words
+    - I have a deep interest in [Literature](preferredFieldOfStudy), where I can immerse myself in the works of great authors and analyze literary themes
+    - The field of [Literature](preferredFieldOfStudy) fascinates me, and I am eager to explore different genres and literary movements
+    - I am passionate about [Literature](preferredFieldOfStudy), as it allows me to understand cultures, histories, and emotions through the power of language
+    - I am enthusiastic about [Literature](preferredFieldOfStudy), as I can critically analyze and interpret complex narratives and literary symbolism
+    - [Literature](preferredFieldOfStudy) resonates with me, and I am excited to engage with thought-provoking poetry and classic novels
+    - I see great value in [Literature](preferredFieldOfStudy), and I am eager to contribute to the appreciation and preservation of literary works
+    - [History](preferredFieldOfStudy) intrigues me, as I am fascinated by the study of past events and their impact on shaping societies
+    - I have a keen interest in [History](preferredFieldOfStudy), where I can uncover hidden stories and understand the complexities of human civilizations
+    - The field of [History](preferredFieldOfStudy) captivates me, and I am eager to explore different historical periods and their significance
+    - I am passionate about [History](preferredFieldOfStudy), as it allows me to learn from the past and gain insights into the challenges of the present
+    - I am enthusiastic about [History](preferredFieldOfStudy), as I can analyze historical documents and narratives to discover historical truths
+    - [History](preferredFieldOfStudy) resonates with me, and I am excited to delve into the lives of historical figures and the dynamics of ancient cultures
+    - I see great value in [History](preferredFieldOfStudy), and I am eager to contribute to the preservation and interpretation of our collective past
+    - [Philosophy](preferredFieldOfStudy) sparks my curiosity, as I am fascinated by the exploration of fundamental questions about existence and knowledge
+    - I have a deep interest in [Philosophy](preferredFieldOfStudy), where I can engage in critical thinking and contemplate ethical dilemmas
+    - The field of [Philosophy](preferredFieldOfStudy) captivates me, and I am eager to explore different philosophical schools of thought
+    - I am passionate about [Philosophy](preferredFieldOfStudy), as it challenges me to question assumptions and seek rational answers
+    - I am enthusiastic about [Philosophy](preferredFieldOfStudy), as I can analyze complex philosophical texts and engage in philosophical debates
+    - [Philosophy](preferredFieldOfStudy) resonates with me, and I am excited to ponder the nature of reality and the human mind
+    - I see great value in [Philosophy](preferredFieldOfStudy), and I am eager to contribute to philosophical discussions and expand my philosophical horizons
+    - [Linguistics](preferredFieldOfStudy) fascinates me, as I am intrigued by the study of language and its role in communication and cognition
+    - I have a keen interest in [Linguistics](preferredFieldOfStudy), where I can analyze language structures and study language evolution
+    - The field of [Linguistics](preferredFieldOfStudy) captivates me, and I am eager to explore different language families and linguistic diversity
+    - I am passionate about [Linguistics](preferredFieldOfStudy), as it allows me to investigate the connections between language and culture
+    - I am enthusiastic about [Linguistics](preferredFieldOfStudy), as I can research language acquisition and the mechanics of human speech
+    - [Linguistics](preferredFieldOfStudy) resonates with me, and I am excited to delve into the intricacies of phonetics and syntax
+    - I see great potential in [Linguistics](preferredFieldOfStudy), and I am eager to contribute to the understanding of language patterns and human communication
+    - [Archaeology](preferredFieldOfStudy) sparks my interest, as I am fascinated by the study of past civilizations and the artifacts they left behind
+    - I have a deep interest in [Archaeology](preferredFieldOfStudy), where I can uncover ancient mysteries and reconstruct historical contexts
+    - The field of [Archaeology](preferredFieldOfStudy) captivates me, and I am eager to explore different excavation methods and archaeological sites
+    - I am passionate about [Archaeology](preferredFieldOfStudy), as it allows me to preserve and interpret our cultural heritage
+    - I am enthusiastic about [Archaeology](preferredFieldOfStudy), as I can analyze archaeological evidence to understand human history
+    - [Archaeology](preferredFieldOfStudy) resonates with me, and I am excited to delve into the artifacts and architecture of past civilizations
+    - I see great value in [Archaeology](preferredFieldOfStudy), and I am eager to contribute to the discovery and preservation of our ancient past
+    - [Anthropology](preferredFieldOfStudy) intrigues me, as I am drawn to the study of human societies, cultures, and evolution
+    - I have a keen interest in [Anthropology](preferredFieldOfStudy), where I can explore the diverse customs and beliefs of different communities
+    - The field of [Anthropology](preferredFieldOfStudy) captivates me, and I am eager to explore different anthropological research methods
+    - I am passionate about [Anthropology](preferredFieldOfStudy), as it allows me to understand the dynamics of human societies and social structures
+    - I am enthusiastic about [Anthropology](preferredFieldOfStudy), as I can engage in ethnographic studies and analyze cultural practices
+    - [Anthropology](preferredFieldOfStudy) resonates with me, and I am excited to delve into the intersections of biology and culture in human evolution
+    - I see great potential in [Anthropology](preferredFieldOfStudy), and I am eager to contribute to the understanding of human diversity and our shared humanity
+    - [Classics](preferredFieldOfStudy) fascinate me, as I am intrigued by the study of ancient civilizations, literature, and languages
+    - I have a deep interest in [Classics](preferredFieldOfStudy), where I can explore the works of ancient philosophers and poets
+    - The field of [Classics](preferredFieldOfStudy) captivates me, and I am eager to delve into the cultural legacy of ancient civilizations
+    - I am passionate about [Classics](preferredFieldOfStudy), as it allows me to analyze the impact of ancient texts on modern society
+    - I am enthusiastic about [Classics](preferredFieldOfStudy), as I can study ancient languages and decipher historical inscriptions
+    - [Classics](preferredFieldOfStudy) resonate with me, and I am excited to delve into the mythologies and histories of the ancient world
+    - I see great value in [Classics](preferredFieldOfStudy), and I am eager to contribute to the preservation and interpretation of ancient texts and artifacts
+    - [Psychology](preferredFieldOfStudy) captivates me, as I am intrigued by the study of the human mind and behavior, seeking to understand what makes us tick
+    - I have a deep interest in [Psychology](preferredFieldOfStudy), where I can explore the complexities of emotions, cognition, and the factors that influence human actions
+    - The field of [Psychology](preferredFieldOfStudy) fascinates me, and I am eager to delve into various psychological theories and research methodologies
+    - I am drawn to [Psychology](preferredFieldOfStudy), as it allows me to apply scientific methods to unravel the mysteries of human behavior
+    - I am passionate about [Psychology](preferredFieldOfStudy), as it empowers me to help individuals navigate challenges and improve their well-being
+    - [Psychology](preferredFieldOfStudy) resonates with me, and I am excited to explore the diverse subfields, from clinical psychology to cognitive neuroscience
+    - I see great potential in [Psychology](preferredFieldOfStudy), and I am eager to contribute to the understanding of human thought processes and social dynamics
+    - [Sociology](preferredFieldOfStudy) intrigues me, as I am fascinated by the study of human societies, institutions, and social interactions
+    - I have a keen interest in [Sociology](preferredFieldOfStudy), where I can examine the structures and dynamics that shape social behaviors and norms
+    - The field of [Sociology](preferredFieldOfStudy) captivates me, and I am eager to explore different sociological perspectives and research methodologies
+    - I am drawn to [Sociology](preferredFieldOfStudy), as it enables me to critically analyze social inequalities and advocate for positive change
+    - I am passionate about [Sociology](preferredFieldOfStudy), as it empowers me to address societal issues and foster greater understanding among diverse communities
+    - [Sociology](preferredFieldOfStudy) resonates with me, and I am excited to delve into the intersections of culture, race, gender, and class
+    - I see great value in [Sociology](preferredFieldOfStudy), and I am eager to contribute to the exploration of social structures and their impact on human behavior
+    - [Economics](preferredFieldOfStudy) captivates me, as I am intrigued by the study of how resources are allocated and the intricate mechanisms of global markets
+    - I have a deep interest in [Economics](preferredFieldOfStudy), where I can analyze economic theories and their application to real-world challenges
+    - The field of [Economics](preferredFieldOfStudy) fascinates me, and I am eager to explore various economic models and their implications
+    - I am drawn to [Economics](preferredFieldOfStudy), as it enables me to understand the forces that drive financial decisions and economic policies
+    - I am passionate about [Economics](preferredFieldOfStudy), as it empowers me to contribute to informed decision-making and sustainable economic development
+    - [Economics](preferredFieldOfStudy) resonates with me, and I am excited to delve into macroeconomics, microeconomics, and econometrics
+    - I see great potential in [Economics](preferredFieldOfStudy), and I am eager to contribute to the understanding of economic trends and their impact on society
+    - [Political Science](preferredFieldOfStudy) intrigues me, as I am fascinated by the study of political systems, governance, and the dynamics of power
+    - I have a keen interest in [Political Science](preferredFieldOfStudy), where I can explore the complexities of international relations and political ideologies
+    - The field of [Political Science](preferredFieldOfStudy) captivates me, and I am eager to delve into various political theories and analyze political institutions
+    - I am drawn to [Political Science](preferredFieldOfStudy), as it allows me to critically examine public policies and their effects on citizens' lives
+    - I am passionate about [Political Science](preferredFieldOfStudy), as it empowers me to engage in meaningful discussions about democracy and social justice
+    - [Political Science](preferredFieldOfStudy) resonates with me, and I am excited to explore the intersections of diplomacy, public administration, and political philosophy
+    - I see great value in [Political Science](preferredFieldOfStudy), and I am eager to contribute to the understanding of political systems and policy-making processes
+    - [Geography](preferredFieldOfStudy) intrigues me, as I am fascinated by the study of Earth's landscapes, natural resources, and human-environment interactions
+    - I have a deep interest in [Geography](preferredFieldOfStudy), where I can explore the physical and cultural diversity of our planet
+    - The field of [Geography](preferredFieldOfStudy) captivates me, and I am eager to delve into various geographical concepts and spatial analysis
+    - I am drawn to [Geography](preferredFieldOfStudy), as it allows me to understand the relationships between humans and their environments
+    - I am passionate about [Geography](preferredFieldOfStudy), as it empowers me to address environmental challenges and contribute to sustainable development
+    - [Geography](preferredFieldOfStudy) resonates with me, and I am excited to explore geographic information systems (GIS) and cartography
+    - I see great potential in [Geography](preferredFieldOfStudy), and I am eager to contribute to the exploration of geographical patterns and their impact on societies
+    - [Communication Studies](preferredFieldOfStudy) captivate me, as I am fascinated by the study of how people exchange information and construct meaning through various forms of communication
+    - I have a deep interest in [Communication Studies](preferredFieldOfStudy), where I can explore the intricacies of verbal and nonverbal communication
+    - The field of [Communication Studies](preferredFieldOfStudy) fascinates me, and I am eager to delve into various communication theories and media analysis
+    - I am drawn to [Communication Studies](preferredFieldOfStudy), as it enables me to understand how communication shapes identity and influences social relationships
+    - I am passionate about [Communication Studies](preferredFieldOfStudy), as it empowers me to become a more effective communicator and advocate for meaningful dialogue
+    - [Communication Studies](preferredFieldOfStudy) resonates with me, and I am excited to explore mass communication, intercultural communication, and organizational communication
+    - I see great potential in [Communication Studies](preferredFieldOfStudy), and I am eager to contribute to the understanding of communication dynamics in diverse contexts
+    - [Music](preferredFieldOfStudy) captivates me, as I am deeply moved by its power to evoke emotions and connect people across cultures
+    - I have a keen interest in [Music](preferredFieldOfStudy), where I can explore the intricacies of melody, harmony, and rhythm
+    - The field of [Music](preferredFieldOfStudy) fascinates me, and I am eager to delve into various musical genres and music theory
+    - I am drawn to [Music](preferredFieldOfStudy), as it allows me to express myself creatively through singing or playing musical instruments
+    - I am passionate about [Music](preferredFieldOfStudy), as it empowers me to touch hearts and inspire change through the universal language of melodies
+    - [Music](preferredFieldOfStudy) resonates with me, and I am excited to explore the nuances of composition, arrangement, and music production
+    - I see great potential in [Music](preferredFieldOfStudy), and I am eager to contribute to the preservation of musical traditions and the creation of innovative sounds
+    - [Theatre](preferredFieldOfStudy) captivates me, as I am enthralled by the magic of storytelling and the transformative nature of acting
+    - I have a strong interest in [Theatre](preferredFieldOfStudy), where I can explore the world of stagecraft, from directing to set design
+    - The field of [Theatre](preferredFieldOfStudy) fascinates me, and I am eager to delve into various theatrical movements and playwrights
+    - I am drawn to [Theatre](preferredFieldOfStudy), as it allows me to embody different characters and explore the human condition through performance
+    - I am passionate about [Theatre](preferredFieldOfStudy), as it empowers me to engage audiences and provoke thought through the art of live performance
+    - [Theatre](preferredFieldOfStudy) resonates with me, and I am excited to explore the intricacies of theatrical production and immersive storytelling
+    - I see great potential in [Theatre](preferredFieldOfStudy), and I am eager to contribute to the creation of powerful narratives that resonate with diverse audiences
+    - [Film Studies](preferredFieldOfStudy) captivate me, as I am enthralled by the art of visual storytelling and cinematic techniques
+    - I have a keen interest in [Film Studies](preferredFieldOfStudy), where I can explore the history of cinema and the impact of films on society
+    - The field of [Film Studies](preferredFieldOfStudy) fascinates me, and I am eager to delve into various film genres and film theory
+    - I am drawn to [Film Studies](preferredFieldOfStudy), as it allows me to analyze and deconstruct the artistry and cultural significance of films
+    - I am passionate about [Film Studies](preferredFieldOfStudy), as it empowers me to contribute to the critical discourse surrounding cinema and its influence
+    - [Film Studies](preferredFieldOfStudy) resonates with me, and I am excited to explore the language of film, cinematography, and film editing
+    - I see great potential in [Film Studies](preferredFieldOfStudy), and I am eager to contribute to the appreciation and understanding of cinema as a powerful medium of storytelling
+    - [Dance](preferredFieldOfStudy) captivates me, as I am deeply moved by the beauty of movement and its capacity to communicate without words
+    - I have a strong interest in [Dance](preferredFieldOfStudy), where I can explore various dance styles and choreographic expressions
+    - The field of [Dance](preferredFieldOfStudy) fascinates me, and I am eager to delve into the history of dance and its cultural significance
+    - I am drawn to [Dance](preferredFieldOfStudy), as it allows me to express emotions and stories through graceful gestures and kinetic energy
+    - I am passionate about [Dance](preferredFieldOfStudy), as it empowers me to communicate through body language and the rhythm of music
+    - [Dance](preferredFieldOfStudy) resonates with me, and I am excited to explore different dance forms, from classical ballet to contemporary dance
+    - I see great potential in [Dance](preferredFieldOfStudy), and I am eager to contribute to the preservation of dance traditions and the innovation of new choreographies
+    - [Creative Writing](preferredFieldOfStudy) captivates me, as I am enamored by the art of crafting narratives and weaving worlds through words
+    - I have a keen interest in [Creative Writing](preferredFieldOfStudy), where I can explore various literary genres and styles
+    - The field of [Creative Writing](preferredFieldOfStudy) fascinates me, and I am eager to delve into the works of esteemed authors and poets
+    - I am drawn to [Creative Writing](preferredFieldOfStudy), as it allows me to express my thoughts and imagination with the power of storytelling
+    - I am passionate about [Creative Writing](preferredFieldOfStudy), as it empowers me to give voice to untold stories and explore the depths of human emotions
+    - [Creative Writing](preferredFieldOfStudy) resonates with me, and I am excited to experiment with different literary techniques and poetic forms
+    - I see great potential in [Creative Writing](preferredFieldOfStudy), and I am eager to contribute to the literary landscape with my unique voice and perspective
+    - [Fine Arts](preferredFieldOfStudy) captivate me, as I am fascinated by the creative expression and artistic exploration of various mediums
+    - I have a deep interest in [Fine Arts](preferredFieldOfStudy), where I can immerse myself in the world of painting, sculpture, and mixed media
+    - The field of [Fine Arts](preferredFieldOfStudy) fascinates me, and I am eager to explore different art movements and art history
+    - I am drawn to [Fine Arts](preferredFieldOfStudy), as it allows me to communicate emotions and ideas through visual forms and aesthetics
+    - I am passionate about [Fine Arts](preferredFieldOfStudy), as it empowers me to challenge conventions and push the boundaries of artistic innovation
+    - [Fine Arts](preferredFieldOfStudy) resonates with me, and I am excited to explore the interplay of colors, textures, and compositions
+    - I see great potential in [Fine Arts](preferredFieldOfStudy), and I am eager to contribute to the enrichment of cultural heritage and artistic expression
+    - [Visual Arts](preferredFieldOfStudy) captivate me, as I am entranced by the language of visual expression and the exploration of aesthetics
+    - I have a strong interest in [Visual Arts](preferredFieldOfStudy), where I can explore various art mediums, such as drawing, painting, and sculpture
+    - The field of [Visual Arts](preferredFieldOfStudy) fascinates me, and I am eager to delve into different art movements and the work of renowned artists
+    - I am drawn to [Visual Arts](preferredFieldOfStudy), as it allows me to convey ideas and emotions through the interplay of colors, shapes, and textures
+    - I am passionate about [Visual Arts](preferredFieldOfStudy), as it empowers me to challenge perspectives and evoke contemplation through artistry
+    - [Visual Arts](preferredFieldOfStudy) resonates with me, and I am excited to explore mixed media, digital art, and the fusion of traditional and contemporary techniques
+    - I see great potential in [Visual Arts](preferredFieldOfStudy), and I am eager to contribute to the enrichment of cultural heritage and the celebration of creativity
+    - The world of [Accounting](preferredFieldOfStudy) intrigues me, as I am fascinated by the meticulous analysis of financial data and its implications
+    - I have a strong interest in [Accounting](preferredFieldOfStudy), where I can delve into the realm of financial statements, audits, and taxation
+    - [Accounting](preferredFieldOfStudy) resonates with my analytical nature, and I am drawn to the precision and accuracy required in financial reporting
+    - I am passionate about [Accounting](preferredFieldOfStudy) and eager to embark on a journey of understanding the language of business through numbers
+    - The field of [Accounting](preferredFieldOfStudy) captivates me, and I want to explore the principles of bookkeeping and financial management
+    - I find great joy in studying [Accounting](preferredFieldOfStudy) and am excited to learn about the regulatory frameworks that govern financial practices
+    - [Accounting](preferredFieldOfStudy) offers a path where I can contribute to the financial stability and decision-making of businesses
+    - [Finance](preferredFieldOfStudy) allures me, as I am captivated by the dynamics of money markets, investments, and wealth management
+    - I have a profound interest in [Finance](preferredFieldOfStudy), where I can understand the complexities of capital allocation and risk management
+    - [Finance](preferredFieldOfStudy) resonates with my desire to analyze financial markets and optimize investment strategies
+    - I am passionate about [Finance](preferredFieldOfStudy) and eager to explore the world of corporate finance and financial planning
+    - The realm of [Finance](preferredFieldOfStudy) fascinates me, and I want to delve into the intricacies of mergers, acquisitions, and valuation
+    - I find great joy in studying [Finance](preferredFieldOfStudy) and am excited to learn about financial modeling and portfolio management
+    - [Finance](preferredFieldOfStudy) offers a path where I can contribute to economic growth and financial decision-making on a global scale
+    - The world of [Marketing](preferredFieldOfStudy) intrigues me, as I am fascinated by the art of connecting products with consumers' desires
+    - I have a strong interest in [Marketing](preferredFieldOfStudy), where I can explore the strategies of branding, advertising, and consumer behavior
+    - [Marketing](preferredFieldOfStudy) resonates with my creativity, and I am drawn to the challenge of developing effective marketing campaigns
+    - I am passionate about [Marketing](preferredFieldOfStudy) and eager to embark on a journey of understanding market research and product positioning
+    - The field of [Marketing](preferredFieldOfStudy) captivates me, and I want to explore the digital marketing landscape and social media strategies
+    - I find great joy in studying [Marketing](preferredFieldOfStudy) and am excited to learn about customer relationship management and market segmentation
+    - [Marketing](preferredFieldOfStudy) offers a path where I can contribute to shaping brand perceptions and influencing purchasing decisions
+    - The world of [Management](preferredFieldOfStudy) intrigues me, as I am fascinated by the dynamics of leading teams and organizational strategies
+    - I have a profound interest in [Management](preferredFieldOfStudy), where I can explore the principles of planning, organizing, and controlling resources
+    - [Management](preferredFieldOfStudy) resonates with my leadership skills, and I am drawn to the challenge of motivating and inspiring teams
+    - I am passionate about [Management](preferredFieldOfStudy) and eager to embark on a journey of understanding business ethics and decision-making
+    - The realm of [Management](preferredFieldOfStudy) fascinates me, and I want to delve into the intricacies of project management and strategic planning
+    - I find great joy in studying [Management](preferredFieldOfStudy) and am excited to learn about human resource management and organizational behavior
+    - [Management](preferredFieldOfStudy) offers a path where I can contribute to the efficiency and effectiveness of businesses and institutions
+    - The world of [Entrepreneurship](preferredFieldOfStudy) intrigues me, as I am fascinated by the journey of turning innovative ideas into successful ventures
+    - I have a strong interest in [Entrepreneurship](preferredFieldOfStudy), where I can explore the principles of business startups and risk-taking
+    - [Entrepreneurship](preferredFieldOfStudy) resonates with my desire for creativity and problem-solving, and I am drawn to the challenge of launching a business
+    - I am passionate about [Entrepreneurship](preferredFieldOfStudy) and eager to embark on a journey of understanding market opportunities and business models
+    - The field of [Entrepreneurship](preferredFieldOfStudy) captivates me, and I want to explore the entrepreneurial ecosystem and venture funding
+    - I find great joy in studying [Entrepreneurship](preferredFieldOfStudy) and am excited to learn about product development and market validation
+    - [Entrepreneurship](preferredFieldOfStudy) offers a path where I can contribute to driving innovation and making a meaningful impact in society
+    - The world of [International Business](preferredFieldOfStudy) intrigues me, as I am fascinated by the complexities of global markets and international trade
+    - I have a profound interest in [International Business](preferredFieldOfStudy), where I can explore the principles of cross-border commerce and cultural diversity
+    - [International Business](preferredFieldOfStudy) resonates with my interest in geopolitics and economic relations among nations
+    - I am passionate about [International Business](preferredFieldOfStudy) and eager to embark on a journey of understanding global supply chains and foreign investment
+    - The realm of [International Business](preferredFieldOfStudy) fascinates me, and I want to delve into the intricacies of international marketing and trade policies
+    - I find great joy in studying [International Business](preferredFieldOfStudy) and am excited to learn about international finance and global business strategies
+    - [International Business](preferredFieldOfStudy) offers a path where I can contribute to fostering economic cooperation and promoting international cooperation
+    - The world of [Human Resource Management](preferredFieldOfStudy) intrigues me, as I am fascinated by the dynamics of talent acquisition and organizational development
+    - I have a strong interest in [Human Resource Management](preferredFieldOfStudy), where I can explore the principles of employee engagement and performance management
+    - [Human Resource Management](preferredFieldOfStudy) resonates with my passion for nurturing human capital and building strong organizational cultures
+    - I am passionate about [Human Resource Management](preferredFieldOfStudy) and eager to embark on a journey of understanding employee relations and workplace diversity
+    - The field of [Human Resource Management](preferredFieldOfStudy) captivates me, and I want to explore the intricacies of compensation and benefits administration
+    - I find great joy in studying [Human Resource Management](preferredFieldOfStudy) and am excited to learn about talent retention and workforce planning
+    - [Human Resource Management](preferredFieldOfStudy) offers a path where I can contribute to creating inclusive workplaces and fostering employee well-being
+    - I am drawn to the field of [Elementary Education](preferredFieldOfStudy), where I can nurture young minds and lay a strong foundation for their academic journey
+    - [Elementary Education](preferredFieldOfStudy) fascinates me, and I am excited about the opportunity to inspire curiosity and a love for learning in young students
+    - I have a profound interest in [Elementary Education](preferredFieldOfStudy), where I can design engaging lesson plans and foster a supportive classroom environment
+    - The world of [Elementary Education](preferredFieldOfStudy) intrigues me, and I want to explore innovative teaching methods to meet the diverse needs of students
+    - I am passionate about [Elementary Education](preferredFieldOfStudy) and eager to embark on a journey of helping students discover their potential and talents
+    - [Elementary Education](preferredFieldOfStudy) resonates with my desire to make a positive impact on society by shaping the next generation of learners
+    - I find great joy in studying [Elementary Education](preferredFieldOfStudy) and am excited to learn about educational psychology and child development
+    - The field of [Secondary Education](preferredFieldOfStudy) captivates me, as I am enthusiastic about guiding adolescents through critical academic and personal growth
+    - [Secondary Education](preferredFieldOfStudy) intrigues me, and I am drawn to the challenge of preparing students for higher education and future careers
+    - I have a strong interest in [Secondary Education](preferredFieldOfStudy), where I can create engaging learning experiences to foster students' intellectual curiosity
+    - [Secondary Education](preferredFieldOfStudy) resonates with my passion for mentorship, as I aim to support students in their pursuit of knowledge and self-discovery
+    - I am passionate about [Secondary Education](preferredFieldOfStudy) and eager to embark on a journey of equipping students with essential life skills and competencies
+    - The world of [Secondary Education](preferredFieldOfStudy) fascinates me, and I want to explore effective classroom management and student engagement strategies
+    - I find great joy in studying [Secondary Education](preferredFieldOfStudy) and am excited to learn about curriculum design and assessment techniques
+    - The world of [Special Education](preferredFieldOfStudy) intrigues me, as I am fascinated by the opportunity to provide personalized support and accommodation to students with diverse learning needs
+    - [Special Education](preferredFieldOfStudy) captivates me, and I am drawn to the rewarding challenge of helping students overcome barriers and reach their full potential
+    - I have a profound interest in [Special Education](preferredFieldOfStudy), where I can develop individualized education plans and advocate for inclusive learning environments
+    - [Special Education](preferredFieldOfStudy) resonates with my empathy and compassion, and I am dedicated to fostering a positive and inclusive classroom culture
+    - I am passionate about [Special Education](preferredFieldOfStudy) and eager to embark on a journey of understanding various learning disabilities and interventions
+    - The field of [Special Education](preferredFieldOfStudy) fascinates me, and I want to explore assistive technology and differentiated instruction to cater to diverse needs
+    - I find great joy in studying [Special Education](preferredFieldOfStudy) and am excited to learn about behavior management and collaboration with families and therapists
+    - The field of [Educational Leadership](preferredFieldOfStudy) intrigues me, as I am fascinated by the opportunity to shape educational policies and foster a positive school culture
+    - [Educational Leadership](preferredFieldOfStudy) captivates me, and I am drawn to the challenge of driving educational innovation and systemic improvement
+    - I have a strong interest in [Educational Leadership](preferredFieldOfStudy), where I can lead and inspire educators to achieve academic excellence and student success
+    - [Educational Leadership](preferredFieldOfStudy) resonates with my vision for transformative change in education and the empowerment of teachers and students
+    - I am passionate about [Educational Leadership](preferredFieldOfStudy) and eager to embark on a journey of understanding effective school administration and strategic planning
+    - The world of [Educational Leadership](preferredFieldOfStudy) fascinates me, and I want to explore educational law and policy development for equitable access to education
+    - I find great joy in studying [Educational Leadership](preferredFieldOfStudy) and am excited to learn about ethical leadership practices and community engagement
+    - The world of [Curriculum and Instruction](preferredFieldOfStudy) intrigues me, as I am fascinated by the development of innovative and effective teaching methodologies
+    - [Curriculum and Instruction](preferredFieldOfStudy) captivate me, and I am drawn to the challenge of designing cohesive and engaging academic programs
+    - I have a profound interest in [Curriculum and Instruction](preferredFieldOfStudy), where I can explore curriculum alignment and pedagogical best practices
+    - [Curriculum and Instruction](preferredFieldOfStudy) resonate with my desire to empower educators with the tools and resources for effective classroom teaching
+    - I am passionate about [Curriculum and Instruction](preferredFieldOfStudy) and eager to embark on a journey of understanding curriculum assessment and improvement
+    - The field of [Curriculum and Instruction](preferredFieldOfStudy) fascinates me, and I want to explore instructional technology and data-driven decision-making in education
+    - I find great joy in studying [Curriculum and Instruction](preferredFieldOfStudy) and am excited to learn about curriculum differentiation and student-centered learning approaches
+    - The field of [Counseling](preferredFieldOfStudy) intrigues me, as I am fascinated by the opportunity to provide emotional support and guidance to individuals facing challenges
+    - [Counseling](preferredFieldOfStudy) captivates me, and I am drawn to the rewarding work of helping people overcome obstacles and improve their mental well-being
+    - I have a strong interest in [Counseling](preferredFieldOfStudy), where I can develop empathetic listening skills and offer therapeutic interventions for personal growth
+    - [Counseling](preferredFieldOfStudy) resonates with my compassion and nonjudgmental nature, and I am dedicated to promoting mental health awareness and resilience
+    - I am passionate about [Counseling](preferredFieldOfStudy) and eager to embark on a journey of understanding various counseling theories and techniques
+    - The world of [Counseling](preferredFieldOfStudy) fascinates me, and I want to explore counseling ethics and multicultural competency in therapeutic practice
+    - I find great joy in studying [Counseling](preferredFieldOfStudy) and am excited to learn about counseling assessments and intervention strategies for diverse populations
+    - I want to study business administration
+    - I'm passionate about [music]{"entity": "preferredFieldOfStudy", "value": "Music"}
+    - I want to learn a new language
+    - I want to study [law]{"entity": "preferredFieldOfStudy", "value": "Law"}
+    - [cyber security]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"}
+    - [Biology](preferredFieldOfStudy)
+    - [Chemistry](preferredFieldOfStudy)
+    - [Physics](preferredFieldOfStudy)
+    - [Environmental Science]{"entity": "preferredFieldOfStudy", "value": "Environmental"}
+    - [Astronomy](preferredFieldOfStudy)
+    - [Geology](preferredFieldOfStudy)
+    - [Neuroscience](preferredFieldOfStudy)
+    - [Computer Science](preferredFieldOfStudy)
+    - [Information Technology](preferredFieldOfStudy)
+    - [Software Engineering](preferredFieldOfStudy)
+    - [Data Science](preferredFieldOfStudy)
+    - [Artificial Intelligence](preferredFieldOfStudy)
+    - [Robotics](preferredFieldOfStudy)
+    - [Civil Engineering](preferredFieldOfStudy)
+    - [Mechanical Engineering](preferredFieldOfStudy)
+    - [Electrical Engineering](preferredFieldOfStudy)
+    - [Chemical Engineering](preferredFieldOfStudy)
+    - [Aerospace Engineering](preferredFieldOfStudy)
+    - [Biomedical Engineering](preferredFieldOfStudy)
+    - [Industrial Engineering](preferredFieldOfStudy)
+    - [Pure Mathematics](preferredFieldOfStudy)
+    - [Applied Mathematics](preferredFieldOfStudy)
+    - [Statistics](preferredFieldOfStudy)
+    - [Operations Research](preferredFieldOfStudy)
+    - [Mathematical Physics](preferredFieldOfStudy)
+    - [Cryptography](preferredFieldOfStudy)
+    - [Literature](preferredFieldOfStudy)
+    - [History](preferredFieldOfStudy)
+    - [Philosophy](preferredFieldOfStudy)
+    - [Linguistics](preferredFieldOfStudy)
+    - [Archaeology](preferredFieldOfStudy)
+    - [Anthropology](preferredFieldOfStudy)
+    - [Classics](preferredFieldOfStudy)
+    - [Psychology](preferredFieldOfStudy)
+    - [Sociology](preferredFieldOfStudy)
+    - [Economics](preferredFieldOfStudy)
+    - [Political Science](preferredFieldOfStudy)
+    - [Geography](preferredFieldOfStudy)
+    - [Communication Studies](preferredFieldOfStudy)
+    - [Fine Arts](preferredFieldOfStudy)
+    - [Music](preferredFieldOfStudy)
+    - [Theatre](preferredFieldOfStudy)
+    - [Film Studies](preferredFieldOfStudy)
+    - [Dance](preferredFieldOfStudy)
+    - [Creative Writing](preferredFieldOfStudy)
+    - [Visual Arts](preferredFieldOfStudy)
+    - [Accounting](preferredFieldOfStudy)
+    - [Finance](preferredFieldOfStudy)
+    - [Marketing](preferredFieldOfStudy)
+    - [Management](preferredFieldOfStudy)
+    - [Entrepreneurship](preferredFieldOfStudy)
+    - [International Business](preferredFieldOfStudy)
+    - [Human Resource Management](preferredFieldOfStudy)
+    - [Elementary Education](preferredFieldOfStudy)
+    - [Secondary Education](preferredFieldOfStudy)
+    - [Special Education](preferredFieldOfStudy)
+    - [Educational Leadership](preferredFieldOfStudy)
+    - [Curriculum and Instruction](preferredFieldOfStudy)
+    - [Counseling](preferredFieldOfStudy)
+    - I want to pursue [cyber security]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"}
+    - I want to pursue [Biology](preferredFieldOfStudy)
+    - I want to pursue [Chemistry](preferredFieldOfStudy)
+    - I want to pursue [Physics](preferredFieldOfStudy)
+    - I want to pursue [Environmental Science]{"entity": "preferredFieldOfStudy", "value": "Environmental"}
+    - I want to pursue [Astronomy](preferredFieldOfStudy)
+    - I want to pursue [Geology](preferredFieldOfStudy)
+    - I want to pursue [Neuroscience](preferredFieldOfStudy)
+    - I want to pursue [Computer Science](preferredFieldOfStudy)
+    - I want to pursue [Information Technology](preferredFieldOfStudy)
+    - I want to pursue [Software Engineering](preferredFieldOfStudy)
+    - I want to pursue [Data Science](preferredFieldOfStudy)
+    - I want to pursue [Artificial Intelligence](preferredFieldOfStudy)
+    - I want to pursue [Robotics](preferredFieldOfStudy)
+    - I want to pursue [Civil Engineering](preferredFieldOfStudy)
+    - I want to pursue [Mechanical Engineering](preferredFieldOfStudy)
+    - I want to pursue [Electrical Engineering](preferredFieldOfStudy)
+    - I want to pursue [Chemical Engineering](preferredFieldOfStudy)
+    - I want to pursue [Aerospace Engineering](preferredFieldOfStudy)
+    - I want to pursue [Biomedical Engineering](preferredFieldOfStudy)
+    - I want to pursue [Industrial Engineering](preferredFieldOfStudy)
+    - I want to pursue [Pure Mathematics](preferredFieldOfStudy)
+    - I want to pursue [Applied Mathematics](preferredFieldOfStudy)
+    - I want to pursue [Statistics](preferredFieldOfStudy)
+    - I want to pursue [Operations Research](preferredFieldOfStudy)
+    - I want to pursue [Mathematical Physics](preferredFieldOfStudy)
+    - I want to pursue [Cryptography](preferredFieldOfStudy)
+    - I want to pursue [Literature](preferredFieldOfStudy)
+    - I want to pursue [History](preferredFieldOfStudy)
+    - I want to pursue [Philosophy](preferredFieldOfStudy)
+    - I want to pursue [Linguistics](preferredFieldOfStudy)
+    - I want to pursue [Archaeology](preferredFieldOfStudy)
+    - I want to pursue [Anthropology](preferredFieldOfStudy)
+    - I want to pursue [Classics](preferredFieldOfStudy)
+    - I want to pursue [Psychology](preferredFieldOfStudy)
+    - I want to pursue [Sociology](preferredFieldOfStudy)
+    - I want to pursue [Economics](preferredFieldOfStudy)
+    - I want to pursue [Political Science](preferredFieldOfStudy)
+    - I want to pursue [Geography](preferredFieldOfStudy)
+    - I want to pursue [Communication Studies](preferredFieldOfStudy)
+    - I want to pursue [Fine Arts](preferredFieldOfStudy)
+    - I want to pursue [Music](preferredFieldOfStudy)
+    - I want to pursue [Theatre](preferredFieldOfStudy)
+    - I want to pursue [Film Studies](preferredFieldOfStudy)
+    - I want to pursue [Dance](preferredFieldOfStudy)
+    - I want to pursue [Creative Writing](preferredFieldOfStudy)
+    - I want to pursue [Visual Arts](preferredFieldOfStudy)
+    - I want to pursue [Accounting](preferredFieldOfStudy)
+    - I want to pursue [Finance](preferredFieldOfStudy)
+    - I want to pursue [Marketing](preferredFieldOfStudy)
+    - I want to pursue [Management](preferredFieldOfStudy)
+    - I want to pursue [Entrepreneurship](preferredFieldOfStudy)
+    - I want to pursue [International Business](preferredFieldOfStudy)
+    - I want to pursue [Human Resource Management](preferredFieldOfStudy)
+    - I want to pursue [Elementary Education](preferredFieldOfStudy)
+    - I want to pursue [Secondary Education](preferredFieldOfStudy)
+    - I want to pursue [Special Education](preferredFieldOfStudy)
+    - I want to pursue [Educational Leadership](preferredFieldOfStudy)
+    - I want to pursue [Curriculum and Instruction](preferredFieldOfStudy)
+    - I want to pursue [Counseling](preferredFieldOfStudy)
+    - I want to study [cyber security]{"entity": "preferredFieldOfStudy", "value": "Cybersecurity"}
+    - I want to study [Biology](preferredFieldOfStudy)
+    - I want to study [Chemistry](preferredFieldOfStudy)
+    - I want to study [Physics](preferredFieldOfStudy)
+    - I want to study [Environmental Science]{"entity": "preferredFieldOfStudy", "value": "Environmental"}
+    - I want to study [Astronomy](preferredFieldOfStudy)
+    - I want to study [Geology](preferredFieldOfStudy)
+    - I want to study [Neuroscience](preferredFieldOfStudy)
+    - I want to study [Computer Science](preferredFieldOfStudy)
+    - I want to study [Information Technology](preferredFieldOfStudy)
+    - I want to study [Software Engineering](preferredFieldOfStudy)
+    - I want to study [Data Science](preferredFieldOfStudy)
+    - I want to study [Artificial Intelligence](preferredFieldOfStudy)
+    - I want to study [Robotics](preferredFieldOfStudy)
+    - I want to study [Civil Engineering](preferredFieldOfStudy)
+    - I want to study [Mechanical Engineering](preferredFieldOfStudy)
+    - I want to study [Electrical Engineering](preferredFieldOfStudy)
+    - I want to study [Chemical Engineering](preferredFieldOfStudy)
+    - I want to study [Aerospace Engineering](preferredFieldOfStudy)
+    - I want to study [Biomedical Engineering](preferredFieldOfStudy)
+    - I want to study [Industrial Engineering](preferredFieldOfStudy)
+    - I want to study [Pure Mathematics](preferredFieldOfStudy)
+    - I want to study [Applied Mathematics](preferredFieldOfStudy)
+    - I want to study [Statistics](preferredFieldOfStudy)
+    - I want to study [Operations Research](preferredFieldOfStudy)
+    - I want to study [Mathematical Physics](preferredFieldOfStudy)
+    - I want to study [Cryptography](preferredFieldOfStudy)
+    - I want to study [Literature](preferredFieldOfStudy)
+    - I want to study [History](preferredFieldOfStudy)
+    - I want to study [Philosophy](preferredFieldOfStudy)
+    - I want to study [Linguistics](preferredFieldOfStudy)
+    - I want to study [Archaeology](preferredFieldOfStudy)
+    - I want to study [Anthropology](preferredFieldOfStudy)
+    - I want to study [Classics](preferredFieldOfStudy)
+    - I want to study [Psychology](preferredFieldOfStudy)
+    - I want to study [Sociology](preferredFieldOfStudy)
+    - I want to study [Economics](preferredFieldOfStudy)
+    - I want to study [Political Science](preferredFieldOfStudy)
+    - I want to study [Geography](preferredFieldOfStudy)
+    - I want to study [Communication Studies](preferredFieldOfStudy)
+    - I want to study [Fine Arts](preferredFieldOfStudy)
+    - I want to study [Music](preferredFieldOfStudy)
+    - I want to study [Theatre](preferredFieldOfStudy)
+    - I want to study [Film Studies](preferredFieldOfStudy)
+    - I want to study [Dance](preferredFieldOfStudy)
+    - I want to study [Creative Writing](preferredFieldOfStudy)
+    - I want to study [Visual Arts](preferredFieldOfStudy)
+    - I want to study [Accounting](preferredFieldOfStudy)
+    - I want to study [Finance](preferredFieldOfStudy)
+    - I want to study [Marketing](preferredFieldOfStudy)
+    - I want to study [Management](preferredFieldOfStudy)
+    - I want to study [Entrepreneurship](preferredFieldOfStudy)
+    - I want to study [International Business](preferredFieldOfStudy)
+    - I want to study [Human Resource Management](preferredFieldOfStudy)
+    - I want to study [Elementary Education](preferredFieldOfStudy)
+    - I want to study [Secondary Education](preferredFieldOfStudy)
+    - I want to study [Special Education](preferredFieldOfStudy)
+    - I want to study [Educational Leadership](preferredFieldOfStudy)
+    - I want to study [Curriculum and Instruction](preferredFieldOfStudy)
+    - I want to study [Counseling](preferredFieldOfStudy)
+    - I want to study [accounting]{"entity": "preferredFieldOfStudy", "value": "Accounting"}
+- intent: inform_preferredModeOfStudy
+  examples: |
+    - I want to learn at my own pace and from the comfort of my [home]{"entity": "preferredModeOfStudy", "value": "Online"}
+    - [Online](preferredModeOfStudy) studies are a great option for me because they provide accessibility
+    - I find [online]{"entity": "preferredModeOfStudy", "value": "Online"} studies preferable
+    - I prefer [online]{"entity": "preferredModeOfStudy", "value": "Online"} studies
+    - I prefer [online]{"entity": "preferredModeOfStudy", "value": "Online"} courses
+    - I choose [online]{"entity": "preferredModeOfStudy", "value": "Online"}
+    - [Online](preferredModeOfStudy) studies suit my learning style
+    - I prefer [offline]{"entity": "preferredModeOfStudy", "value": "Offline"} courses
+    - I want to study in a [classroom]{"entity": "preferredModeOfStudy", "value": "Offline"}
+    - I have a strong preference for attending [offline]{"entity": "preferredModeOfStudy", "value": "Offline"} classes
+    - [Offline](preferredModeOfStudy) classes are my preferred learning method
+    - When it comes to classes, I greatly prefer the traditional [offline]{"entity": "preferredModeOfStudy", "value": "Offline"} format
+    - [Offline](preferredModeOfStudy) classes are where I thrive academically
+    - For me, there's nothing quite like attending [offline]{"entity": "preferredModeOfStudy", "value": "Offline"} classes
+    - I'm a firm believer in the benefits of [offline]{"entity": "preferredModeOfStudy", "value": "Offline"} classes
+    - [Offline](preferredModeOfStudy) classes align with my preferred learning style
+    - I'm open to [any] mode of study{"entity":"preferredModeOfStudy", "value":"Any"}
+    - I'm open to [both]{"entity": "preferredModeOfStudy", "value": "Any"} offline and online modes of study
+    - I have [no preference]{"entity": "preferredModeOfStudy", "value": "Any"} when it comes to the mode of study
+    - I'm [flexible]{"entity": "preferredModeOfStudy", "value": "Any"} when it comes to the mode of study
+    - I [don't have a fixed preference]{"entity": "preferredModeOfStudy", "value": "Any"} for the mode of study
+    - I'm keeping my options [open]{"entity": "preferredModeOfStudy", "value": "Any"} when it comes to the mode of study
+    - I'm [receptive to various]{"entity": "preferredModeOfStudy", "value": "Any"} modes of study
+    - I'm [open]{"entity": "preferredModeOfStudy", "value": "Any"} to whichever option best aligns with my educational objectives
+    - I prefer [online]{"entity": "preferredModeOfStudy", "value": "Online"}
+    - I choose [offline]{"entity": "preferredModeOfStudy", "value": "Offline"}
+    - [Offline]{"entity": "preferredModeOfStudy", "value": "Offline"} would be great!
+    - [Online]{"entity": "preferredModeOfStudy", "value": "Online"} would be great!
+    - My choice is [online]{"entity": "preferredModeOfStudy", "value": "Online"}    
+- intent: inform_preferredLocation
+  examples: |
+    - I'm intrigued by the educational opportunities in [Carlow](preferredLocation), and I'm excited to explore the programs offered
+    - [Carlow](preferredLocation) is a charming county with renowned educational institutions that match my interests
+    - I have my eyes set on [Carlow](preferredLocation) for my higher education due to its excellent reputation in academia
+    - The educational facilities in [Carlow](preferredLocation) align perfectly with my career goals, making it an ideal choice for my studies
+    - The scenic landscapes and academic offerings of [Carlow](preferredLocation) have caught my attention for higher studies
+    - I've heard great things about the universities in [Carlow](preferredLocation), and I am eager to experience their academic environment
+    - I have researched extensively about [Carlow](preferredLocation), and I believe it's the perfect place for me to pursue my academic dreams
+    - [Cavan](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - The educational institutions in [Cavan](preferredLocation) offer a diverse range of courses that align with my interests and aspirations
+    - I'm considering studying in [Cavan](preferredLocation) as it provides a unique and enriching learning experience
+    - I am captivated by the rich cultural heritage and academic prospects of [Cavan](preferredLocation)
+    - [Cavan](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - The serene environment and reputed universities in [Cavan](preferredLocation) make it an attractive study destination for me
+    - I am seriously considering [Cavan](preferredLocation) as my study destination due to its excellent academic reputation
+    - [Clare](preferredLocation) has a wonderful mix of cultural heritage and educational prospects that make it an attractive study destination
+    - The universities in [Clare](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - The scenic beauty and academic opportunities in [Clare](preferredLocation) have caught my attention for higher studies
+    - I'm interested in studying in [Clare](preferredLocation) due to its serene environment and reputed educational institutions
+    - [Clare](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - The educational facilities in [Clare](preferredLocation) are renowned, and that's what makes it a top choice for my studies
+    - I have my eyes set on [Clare](preferredLocation) for my higher education due to its excellence in academia
+    - [Cork](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I am captivated by the historical significance and academic prospects of [Cork](preferredLocation)
+    - I'm considering studying in [Cork](preferredLocation) as it provides an enriching and diverse learning experience
+    - [Cork](preferredLocation) is known for its renowned universities and top-notch education, making it an ideal study destination
+    - I am seriously considering [Cork](preferredLocation) as my study location due to its excellent academic reputation
+    - The cultural diversity and academic opportunities in [Cork](preferredLocation) have caught my attention for higher studies
+    - [Cork](preferredLocation) offers a perfect blend of academic excellence and a welcoming atmosphere that interests me
+    - [Donegal](preferredLocation) is a hidden gem with excellent educational facilities that I'm interested in exploring
+    - I am intrigued by the educational opportunities in [Donegal](preferredLocation), and I'm excited to explore the programs offered
+    - The universities in [Donegal](preferredLocation) offer a diverse range of courses that align with my interests and aspirations
+    - The serene landscapes and academic offerings of [Donegal](preferredLocation) have caught my attention for higher studies
+    - I have heard great things about the educational institutions in [Donegal](preferredLocation), and I am eager to experience their academic environment
+    - [Donegal](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - I have researched extensively about [Donegal](preferredLocation), and I believe it's the perfect place for me to pursue my academic dreams
+    - [Dublin](preferredLocation) is a vibrant city with renowned educational institutions that match my interests
+    - The academic excellence and cultural diversity of [Dublin](preferredLocation) have caught my attention for higher studies
+    - I'm considering studying in [Dublin](preferredLocation) as it provides an enriching and diverse learning experience
+    - [Dublin](preferredLocation) is known for its top-notch universities and wide range of educational opportunities, making it an ideal study destination
+    - The rich history and academic offerings in [Dublin](preferredLocation) make it an appealing choice for my studies
+    - I have my eyes set on [Dublin](preferredLocation) for my higher education due to its excellence in academia
+    - [Dublin](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - The educational institutions in [Galway](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I am captivated by the historical significance and academic prospects of [Galway](preferredLocation)
+    - I'm interested in studying in [Galway](preferredLocation) due to its serene environment and reputed educational institutions
+    - [Galway](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - The universities in [Galway](preferredLocation) offer a perfect blend of academic excellence and a welcoming atmosphere that interests me
+    - [Galway](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - I am seriously considering [Galway](preferredLocation) as my study destination due to its excellent academic reputation
+    - [Kerry](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - I have researched extensively about [Kerry](preferredLocation), and I believe it's the perfect place for me to pursue my academic dreams
+    - [Kerry](preferredLocation) has a wonderful mix of cultural heritage and educational prospects that make it an attractive study destination
+    - The universities in [Kerry](preferredLocation) offer a diverse range of courses that align with my interests and career aspirations
+    - The serene landscapes and academic offerings of [Kerry](preferredLocation) have caught my attention for higher studies
+    - I am intrigued by the educational opportunities in [Kerry](preferredLocation), and I'm excited to explore the programs offered
+    - I'm considering studying in [Kerry](preferredLocation) as it provides a unique and enriching learning experience
+    - I'm interested in studying in [Kildare](preferredLocation) due to its serene environment and reputed educational institutions
+    - [Kildare](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - The universities in [Kildare](preferredLocation) offer a perfect blend of academic excellence and a welcoming atmosphere that interests me
+    - [Kildare](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I am captivated by the historical significance and academic prospects of [Kildare](preferredLocation)
+    - I am seriously considering [Kildare](preferredLocation) as my study destination due to its excellent academic reputation
+    - The cultural diversity and academic opportunities in [Kildare](preferredLocation) have caught my attention for higher studies
+    - The universities in [Kilkenny](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - [Kilkenny](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - I am captivated by the historical significance and academic prospects of [Kilkenny](preferredLocation)
+    - I'm considering studying in [Kilkenny](preferredLocation) as it provides an enriching and diverse learning experience
+    - [Kilkenny](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - I am intrigued by the educational opportunities in [Kilkenny](preferredLocation), and I'm excited to explore the programs offered
+    - [Laois](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm interested in studying in [Laois](preferredLocation) due to its serene environment and reputed educational institutions
+    - The academic excellence and cultural diversity of [Laois](preferredLocation) have caught my attention for higher studies
+    - I am captivated by the rich cultural heritage and academic prospects of [Laois](preferredLocation)
+    - The universities in [Laois](preferredLocation) offer a diverse range of courses that align with my interests and career aspirations
+    - [Laois](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - I have researched extensively about [Laois](preferredLocation), and I believe it's the perfect place for me to pursue my academic dreams
+    - I am intrigued by the educational opportunities in [Leitrim](preferredLocation), and I'm excited to explore the programs offered
+    - [Leitrim](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - The universities in [Leitrim](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I'm considering studying in [Leitrim](preferredLocation) as it provides an enriching and diverse learning experience
+    - [Leitrim](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - The serene landscapes and academic offerings of [Leitrim](preferredLocation) have caught my attention for higher studies
+    - I am seriously considering [Leitrim](preferredLocation) as my study destination due to its excellent academic reputation
+    - [Limerick](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - The universities in [Limerick](preferredLocation) offer a diverse range of courses that align with my interests and career aspirations
+    - I'm interested in studying in [Limerick](preferredLocation) due to its serene environment and reputed educational institutions
+    - [Limerick](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - The academic excellence and cultural diversity of [Limerick](preferredLocation) have caught my attention for higher studies
+    - I have my eyes set on [Limerick](preferredLocation) for my higher education due to its excellence in academia
+    - I am captivated by the historical significance and academic prospects of [Limerick](preferredLocation)
+    - The cultural diversity and academic opportunities in [Longford](preferredLocation) have caught my attention for higher studies
+    - I am captivated by the rich cultural heritage and academic prospects of [Longford](preferredLocation)
+    - [Longford](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm considering studying in [Longford](preferredLocation) as it provides a unique and enriching learning experience
+    - [Longford](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - The universities in [Longford](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I have researched extensively about [Longford](preferredLocation), and I believe it's the perfect place for me to pursue my academic dreams
+    - The serene landscapes and academic offerings of [Louth](preferredLocation) have caught my attention for higher studies
+    - I am intrigued by the educational opportunities in [Louth](preferredLocation), and I'm excited to explore the programs offered
+    - [Louth](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - I'm interested in studying in [Louth](preferredLocation) due to its serene environment and reputed educational institutions
+    - The universities in [Louth](preferredLocation) offer a diverse range of courses that align with my interests and career aspirations
+    - [Louth](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - I am seriously considering [Louth](preferredLocation) as my study destination due to its excellent academic reputation
+    - I am seriously considering [Mayo](preferredLocation) as my study destination due to its excellent academic reputation
+    - The academic excellence and cultural diversity of [Mayo](preferredLocation) have caught my attention for higher studies
+    - I have my eyes set on [Mayo](preferredLocation) for my higher education due to its excellence in academia
+    - [Mayo](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm considering studying in [Mayo](preferredLocation) as it provides an enriching and diverse learning experience
+    - The universities in [Mayo](preferredLocation) offer a perfect blend of academic excellence and a welcoming atmosphere that interests me
+    - I'm interested in studying in [Mayo](preferredLocation) due to its serene environment and reputed educational institutions
+    - The universities in [Meath](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I am captivated by the historical significance and academic prospects of [Meath](preferredLocation)
+    - [Meath](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - I'm considering studying in [Meath](preferredLocation) as it provides an enriching and diverse learning experience
+    - The cultural diversity and academic opportunities in [Meath](preferredLocation) have caught my attention for higher studies
+    - [Meath](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - I am intrigued by the educational opportunities in [Meath](preferredLocation), and I'm excited to explore the programs offered
+    - The serene landscapes and academic offerings of [Monaghan] have caught my attention for higher studies
+    - I am captivated by the rich cultural heritage and academic prospects of [Monaghan]
+    - [Monaghan] has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm considering studying in [Monaghan] as it provides a unique and enriching learning experience
+    - [Monaghan] is known for its strong academic programs and welcoming community, which align with my goals
+    - The universities in [Monaghan] offer a wide range of courses that suit my interests and career aspirations
+    - I have researched extensively about [Monaghan], and I believe it's the perfect place for me to pursue my academic dreams
+    - I am seriously considering [Offaly](preferredLocation) as my study destination due to its excellent academic reputation
+    - The academic excellence and cultural diversity of [Offaly](preferredLocation) have caught my attention for higher studies
+    - I have my eyes set on [Offaly](preferredLocation) for my higher education due to its excellence in academia
+    - [Offaly](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm considering studying in [Offaly](preferredLocation) as it provides an enriching and diverse learning experience
+    - The universities in [Offaly](preferredLocation) offer a perfect blend of academic excellence and a welcoming atmosphere that interests me
+    - I'm interested in studying in [Offaly](preferredLocation) due to its serene environment and reputed educational institutions
+    - The universities in [Roscommon](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I am captivated by the historical significance and academic prospects of [Roscommon](preferredLocation)
+    - [Roscommon](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - I'm considering studying in [Roscommon](preferredLocation) as it provides an enriching and diverse learning experience
+    - The cultural diversity and academic opportunities in [Roscommon](preferredLocation) have caught my attention for higher studies
+    - [Roscommon](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - I am intrigued by the educational opportunities in [Roscommon](preferredLocation), and I'm excited to explore the programs offered
+    - The serene landscapes and academic offerings of [Sligo](preferredLocation) have caught my attention for higher studies
+    - I am captivated by the rich cultural heritage and academic prospects of [Sligo](preferredLocation)
+    - [Sligo](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm considering studying in [Sligo](preferredLocation) as it provides a unique and enriching learning experience
+    - [Sligo](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - The universities in [Sligo](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I have researched extensively about [Sligo](preferredLocation), and I believe it's the perfect place for me to pursue my academic dreams
+    - I am seriously considering [Tipperary] as my study destination due to its excellent academic reputation
+    - The academic excellence and cultural diversity of [Tipperary] have caught my attention for higher studies
+    - I have my eyes set on [Tipperary] for my higher education due to its excellence in academia
+    - [Tipperary] has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm considering studying in [Tipperary] as it provides an enriching and diverse learning experience
+    - The universities in [Tipperary] offer a perfect blend of academic excellence and a welcoming atmosphere that interests me
+    - I'm interested in studying in [Tipperary] due to its serene environment and reputed educational institutions
+    - The universities in [Waterford](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I am captivated by the historical significance and academic prospects of [Waterford](preferredLocation)
+    - [Waterford](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - I'm considering studying in [Waterford](preferredLocation) as it provides an enriching and diverse learning experience
+    - The cultural diversity and academic opportunities in [Waterford](preferredLocation) have caught my attention for higher studies
+    - [Waterford](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - I am intrigued by the educational opportunities in [Waterford](preferredLocation), and I'm excited to explore the programs offered
+    - The serene landscapes and academic offerings of [Westmeath](preferredLocation) have caught my attention for higher studies
+    - I am captivated by the rich cultural heritage and academic prospects of [Westmeath](preferredLocation)
+    - [Westmeath](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm considering studying in [Westmeath](preferredLocation) as it provides a unique and enriching learning experience
+    - [Westmeath](preferredLocation) is known for its strong academic programs and welcoming community, which align with my goals
+    - The universities in [Westmeath](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I have researched extensively about [Westmeath](preferredLocation), and I believe it's the perfect place for me to pursue my academic dreams
+    - I am seriously considering [Wexford](preferredLocation) as my study destination due to its excellent academic reputation
+    - The academic excellence and cultural diversity of [Wexford](preferredLocation) have caught my attention for higher studies
+    - I have my eyes set on [Wexford](preferredLocation) for my higher education due to its excellence in academia
+    - [Wexford](preferredLocation) has always been on top of my list for higher education due to its vibrant academic environment
+    - I'm considering studying in [Wexford](preferredLocation) as it provides an enriching and diverse learning experience
+    - The universities in [Wexford](preferredLocation) offer a perfect blend of academic excellence and a welcoming atmosphere that interests me
+    - I'm interested in studying in [Wexford](preferredLocation) due to its serene environment and reputed educational institutions
+    - The universities in [Wicklow](preferredLocation) offer a wide range of courses that suit my interests and career aspirations
+    - I am captivated by the historical significance and academic prospects of [Wicklow](preferredLocation)
+    - [Wicklow](preferredLocation) is known for its supportive educational community, and that is something I find very appealing
+    - I'm considering studying in [Wicklow](preferredLocation) as it provides an enriching and diverse learning experience
+    - The cultural diversity and academic opportunities in [Wicklow](preferredLocation) have caught my attention for higher studies
+    - [Wicklow](preferredLocation) has emerged as one of my preferred choices for further studies, given its educational offerings
+    - I am intrigued by the educational opportunities in [Wicklow](preferredLocation), and I'm excited to explore the programs offered
+    - [Antrim's]{"entity": "preferredLocation", "value": "Antrim"} educational institutions have caught my attention, and I'm considering studying there
+    - The universities in [Antrim](preferredLocation) offer a wide range of courses that align with my interests and career goals
+    - [Antrim's]{"entity": "preferredLocation", "value": "Antrim"} rich history and cultural heritage make it an appealing place to pursue my studies
+    - I'm excited about the prospect of studying in [Antrim](preferredLocation) and being part of its vibrant academic community
+    - [Antrim's]{"entity": "preferredLocation", "value": "Antrim"} commitment to academic excellence and research opportunities are attractive to me
+    - I believe that studying in [Antrim](preferredLocation) will provide me with a well-rounded education and valuable experiences
+    - The supportive learning environment in [Antrim](preferredLocation) makes it an ideal place to enhance my knowledge and skills
+    - [Armagh's]{"entity": "preferredLocation", "value": "Armagh"} educational offerings have piqued my interest, and I'm considering it for my studies
+    - I've heard great things about the universities in [Armagh](preferredLocation), and I'm excited about the possibilities they offer
+    - [Armagh's]{"entity": "preferredLocation", "value": "Armagh"} beautiful landscapes and historical significance make it a unique and inspiring place to study
+    - The academic programs in [Armagh](preferredLocation) align perfectly with my academic and career aspirations
+    - I believe that studying in [Armagh](preferredLocation) will provide me with a holistic and enriching educational experience
+    - [Armagh's]{"entity": "preferredLocation", "value": "Armagh"} universities have a strong reputation for academic excellence, which is why I'm interested in them
+    - I'm drawn to [Armagh's]{"entity": "preferredLocation", "value": "Armagh"} friendly and inclusive student community, making it an attractive study destination
+    - [Londonderry]{"entity": "preferredLocation", "value": "Derry"} has some excellent educational institutions, and I'm considering it for my studies
+    - The universities in [Derry](preferredLocation) offer diverse courses that align with my academic interests
+    - [Derry's]{"entity": "preferredLocation", "value": "Derry"} rich cultural scene and vibrant student life make it an exciting place to study
+    - I believe that studying in [Derry](preferredLocation) will provide me with unique learning opportunities
+    - [Londonderry's]{"entity": "preferredLocation", "value": "Derry"} strong emphasis on research and innovation is appealing to me as a student
+    - I'm impressed by the academic resources and facilities available in [Londonderry]{"entity": "preferredLocation", "value": "Derry"}
+    - [Derry](preferredLocation) welcoming and inclusive atmosphere makes it an ideal place to pursue higher education
+    - [Down's]{"entity": "preferredLocation", "value": "Down"} educational institutions have captured my interest, and I'm considering it for my studies
+    - I'm excited about the possibility of studying in [Down](preferredLocation) and exploring its natural beauty
+    - [Down's]{"entity": "preferredLocation", "value": "Down"} universities offer academic programs that perfectly match my career aspirations
+    - I believe that studying in [Down](preferredLocation) will provide me with a well-rounded and globally recognized education
+    - The research opportunities and industry connections in [Down](preferredLocation) are appealing to me
+    - [Down's]{"entity": "preferredLocation", "value": "Down"} supportive and close-knit academic community makes it an attractive study destination
+    - The cultural diversity and rich history of [Down](preferredLocation) make it a fascinating place to pursue higher education
+    - [Fermanagh's]{"entity": "preferredLocation", "value": "Fermanagh"} educational offerings have caught my attention, and I'm seriously considering it
+    - I'm drawn to [Fermanagh's]{"entity": "preferredLocation", "value": "Fermanagh"} universities because of their strong focus on practical learning
+    - [Fermanagh's]{"entity": "preferredLocation", "value": "Fermanagh"} picturesque landscapes and tranquil environment create an ideal setting for studying
+    - I believe that studying in [Fermanagh](preferredLocation) will provide me with a unique and enriching educational experience
+    - The academic programs in [Fermanagh](preferredLocation) align perfectly with my interests and future career goals
+    - [Fermanagh's]{"entity": "preferredLocation", "value": "Fermanagh"} universities have a reputation for excellence in teaching and research
+    - I'm excited about the prospect of being part of [Fermanagh's]{"entity": "preferredLocation", "value": "Fermanagh"} academic and cultural community
+    - [Tyrone's]{"entity": "preferredLocation", "value": "Tyrone"} educational institutions have impressed me, and I'm considering it as one of my top choices
+    - I'm excited about the academic opportunities and student support services available in [Tyrone](preferredLocation)
+    - The universities in [Tyrone](preferredLocation) offer specialized courses that align perfectly with my academic interests
+    - [Tyrone's]{"entity": "preferredLocation", "value": "Tyrone"} vibrant student life and diverse extracurricular activities make it an appealing study destination
+    - I believe that studying in [Tyrone](preferredLocation) will equip me with the skills and knowledge to succeed in my career
+    - [Tyrone's]{"entity": "preferredLocation", "value": "Tyrone"} strong sense of community and supportive faculty members make it an attractive choice
+    - The research opportunities and cutting-edge facilities in [Tyrone](preferredLocation) are highly appealing to me
+    - [Carlow](preferredLocation)
+    - [Cavan](preferredLocation)
+    - [Clare](preferredLocation)
+    - [Cork](preferredLocation)
+    - [Donegal](preferredLocation)
+    - [Dublin](preferredLocation)
+    - [Galway](preferredLocation)
+    - [Kerry](preferredLocation)
+    - [Kildare](preferredLocation)
+    - [Kilkenny](preferredLocation)
+    - [Laois](preferredLocation)
+    - [Leitrim](preferredLocation)
+    - [Limerick](preferredLocation)
+    - [Longford](preferredLocation)
+    - [Louth](preferredLocation)
+    - [Mayo](preferredLocation)
+    - [Meath](preferredLocation)
+    - [Monaghan](preferredLocation)
+    - [Offaly](preferredLocation)
+    - [Roscommon](preferredLocation)
+    - [Sligo](preferredLocation)
+    - [Tipperary](preferredLocation)
+    - [Waterford](preferredLocation)
+    - [Westmeath](preferredLocation)
+    - [Wexford](preferredLocation)
+    - [Wicklow](preferredLocation)
+    - [Antrim](preferredLocation)
+    - [Armagh](preferredLocation)
+    - [Down](preferredLocation)
+    - [Fermanagh](preferredLocation)
+    - [Londonderry]{"entity": "preferredLocation", "value": "Derry"}
+    - [Derry](preferredLocation)
+    - [Tyrone](preferredLocation)
+    - I prefer [Carlow](preferredLocation)
+    - I prefer [Cavan](preferredLocation)
+    - I prefer [Clare](preferredLocation)
+    - I prefer [Cork](preferredLocation)
+    - I prefer [Donegal](preferredLocation)
+    - I prefer [Dublin](preferredLocation)
+    - I prefer [Galway](preferredLocation)
+    - I prefer [Kerry](preferredLocation)
+    - I prefer [Kildare](preferredLocation)
+    - I prefer [Kilkenny](preferredLocation)
+    - I prefer [Laois](preferredLocation)
+    - I prefer [Leitrim](preferredLocation)
+    - I prefer [Limerick](preferredLocation)
+    - I prefer [Longford](preferredLocation)
+    - I prefer [Louth](preferredLocation)
+    - I prefer [Mayo](preferredLocation)
+    - I prefer [Meath](preferredLocation)
+    - I prefer [Monaghan](preferredLocation)
+    - I prefer [Offaly](preferredLocation)
+    - I prefer [Roscommon](preferredLocation)
+    - I prefer [Sligo](preferredLocation)
+    - I prefer [Tipperary](preferredLocation)
+    - I prefer [Waterford](preferredLocation)
+    - I prefer [Westmeath](preferredLocation)
+    - I prefer [Wexford](preferredLocation)
+    - I prefer [Wicklow](preferredLocation)
+    - I prefer [Antrim](preferredLocation)
+    - I prefer [Armagh](preferredLocation)
+    - I prefer [Down](preferredLocation)
+    - I prefer [Fermanagh](preferredLocation)
+    - I prefer [Londonderry]{"entity": "preferredLocation", "value": "Derry"}
+    - I prefer [Derry](preferredLocation)
+    - I prefer [Tyrone](preferredLocation)
+    - I choose [Carlow](preferredLocation)
+    - I choose [Cavan](preferredLocation)
+    - I choose [Clare](preferredLocation)
+    - I choose [Cork](preferredLocation)
+    - I choose [Donegal](preferredLocation)
+    - I choose [Dublin](preferredLocation)
+    - I choose [Galway](preferredLocation)
+    - I choose [Kerry](preferredLocation)
+    - I choose [Kildare](preferredLocation)
+    - I choose [Kilkenny](preferredLocation)
+    - I choose [Laois](preferredLocation)
+    - I choose [Leitrim](preferredLocation)
+    - I choose [Limerick](preferredLocation)
+    - I choose [Longford](preferredLocation)
+    - I choose [Louth](preferredLocation)
+    - I choose [Mayo](preferredLocation)
+    - I choose [Meath](preferredLocation)
+    - I choose [Monaghan](preferredLocation)
+    - I choose [Offaly](preferredLocation)
+    - I choose [Roscommon](preferredLocation)
+    - I choose [Sligo](preferredLocation)
+    - I choose [Tipperary](preferredLocation)
+    - I choose [Waterford](preferredLocation)
+    - I choose [Westmeath](preferredLocation)
+    - I choose [Wexford](preferredLocation)
+    - I choose [Wicklow](preferredLocation)
+    - I choose [Antrim](preferredLocation)
+    - I choose [Armagh](preferredLocation)
+    - I choose [Down](preferredLocation)
+    - I choose [Fermanagh](preferredLocation)
+    - I choose [Londonderry]{"entity": "preferredLocation", "value": "Derry"}
+    - I choose [Derry](preferredLocation)
+    - I choose [Tyrone](preferredLocation)
+    - [Dublin](preferredLocation) is a good choice I guess
+- intent: inform_budget
+  examples: |
+    - I have a limited budget
+    - Less budget
+    - Money is not a problem for me
+    - I'm looking for affordable options
+    - I'm willing to pay for quality education
+    - My budget is $25,000
+    - There is [no](budget) limit
+- intent: inform_timeAvailability
+  examples: |
+    - I prefer [full time]{"entity": "timeAvailability", "value": "Full time"}
+    - I choose [full time]{"entity": "timeAvailability", "value": "Full time"}
+    - I strongly prefer [full time] studies because it allows me to fully immerse myself in my educational journey
+    - [Full time](timeAvailability) studies are my preferred mode of education
+    - For me, [full time]{"entity": "timeAvailability", "value": "Full time"} studies offer the ideal learning environment
+    - I have a strong preference for [full time]{"entity": "timeAvailability", "value": "Full time"} studies as it enables me to commit my undivided attention to my academic pursuits
+    - [Full-time]{"entity": "timeAvailability", "value": "Full time"} studies are my preferred approach because I thrive in a structured and focused learning environment
+    - The [full time]{"entity": "timeAvailability", "value": "Full time"} study format is what suits me best
+    - I am a firm believer in the benefits of [full time]{"entity": "timeAvailability", "value": "Full time"} studies
+    - I have a [flexible schedule]{"entity": "timeAvailability", "value": "Any"}
+    - I'm completely open to [both]{"entity": "timeAvailability", "value": "Any"} options
+    - I [don't have a fixed preference]{"entity": "preferredModeOfStudy", "value": "Any"}
+    - I am fine with [anything]{"entity": "preferredModeOfStudy", "value": "Any"}
+    - I am fine with [both]{"entity": "preferredModeOfStudy", "value": "Any"}
+    - I have a strong preference for [part time]{"entity": "timeAvailability", "value": "Part time"} studies as it allows me to balance my educational pursuits with other commitments, such as work or family responsibilities. It provides the flexibility I need to effectively manage my time and make progress towards my academic goals
+    - [Part time](timeAvailability) studies are my preferred mode of education. By spreading out my coursework over a longer period, I can maintain a healthy work-life-study balance and ensure that I can dedicate sufficient time and energy to each aspect of my life
+    - For me, [part time]{"entity": "timeAvailability", "value": "Part time"} studies offer the perfect solution. It allows me to pursue my educational aspirations without overwhelming myself with a heavy course load. By taking my time and focusing on a manageable number of courses, I can thoroughly grasp the material and excel academically
+    - I strongly favor [part time]{"entity": "timeAvailability", "value": "Part time"} studies because it allows me to delve deeper into the subjects I am passionate about. By dedicating more time to each course, I can engage in extensive research, participate actively in discussions, and gain a comprehensive understanding of the topics
+    - [Part-time]{"entity": "timeAvailability", "value": "Part time"} studies align with my lifestyle and learning preferences. I appreciate the ability to learn at a slower pace, giving me ample time to absorb the material, reflect on my coursework, and apply what I've learned in real-world situations
+    - The flexibility offered by [part time]{"entity": "timeAvailability", "value": "Part time"} studies is what suits me best. It enables me to pursue my educational goals while accommodating my other commitments. This approach allows me to make steady progress towards my degree without feeling overwhelmed
+    - I have a strong inclination towards [part time]{"entity": "timeAvailability", "value": "Part time"} studies because it allows me to personalize my learning experience. By having more control over my schedule, I can tailor my studies to my individual needs, explore additional interests, and maintain a healthy work-life-study balance
+    - I choose [full time]{"entity": "timeAvailability", "value": "Full time"} course
+    - I am looking for [full time](timeAvailability) courses
+    - I prefer [full time]{"entity": "timeAvailability", "value": "Full time"}
+- intent: recommend_educational_path
+  examples: |
+    - Sure what do you need?
+    - Alright, ask me what you need
+    - Cool, let's get started
+    - Can you recommend any [online]{"entity": "preferredModeOfStudy", "value": "Online"} [computer science]{"entity": "preferredFieldOfStudy", "value": "Computer science"} programs?
+    - What are the best universities for studying business administration?
+    - I'm looking for affordable language courses, any recommendations?
+    - I am interested in studying [information technology]{"entity": "preferredFieldOfStudy", "value": "Information Technology"}
+    - I prefer [online]{"entity": "preferredModeOfStudy", "value": "Online"} courses
+    - I am looking for courses within a budget of $1000
+    - I am a software engineer looking to upskill myself
+    - My career goal is to become a [software]{"entity": "preferredFieldOfStudy", "value": "Software"} engineer
+    - Are there any renowned business schools in Dublin?
+    - I'm interested in pursuing a degree in business administration
+    - I would like to attend a university with a strong business program in the capital city of Ireland
+    - What are the options for studying archaeology in County Kerry?
+    - I have a deep interest in Irish history and would love to study archaeology in a region known for its rich archaeological sites
+    - Can you recommend any reputable music colleges in Galway?
+    - I'm passionate about music and would like to pursue my studies in a city that has a vibrant music scene
+    - I'm looking for computer science programs in Cork
+    - Which universities in Cork offer excellent computer science programs and provide a strong foundation in coding and software development?
+    - What are the best universities in Limerick for studying nursing?
+    - I'm interested in pursuing a nursing degree
+    - I would like to attend a university with a strong reputation for nursing education in Limerick
+    - Are there any art colleges in Waterford?
+    - I am a carpenter
+    - Being a manager I want to study about data science
+    - I'm interested in pursuing a degree in fine arts
+    - I would like to explore opportunities in the city of Waterford known for its artistic community
+    - Can you suggest any reputable culinary schools in Belfast?
+    - I'm passionate about cooking and would love to learn from renowned chefs in Northern Ireland's vibrant culinary hub
+    - I'm looking for environmental science programs in County Mayo
+    - Which universities in Mayo offer comprehensive environmental science education and have a strong focus on sustainability and conservation?
+    - What are the options for studying literature in Dublin?
+    - I have a deep love for literature and would like to attend a university in Dublin that offers a diverse range of literature courses and renowned professors in the field
+    - Can you recommend any reputable engineering schools in County Donegal?
+    - I'm interested in pursuing a degree in [mechanical engineering]{"entity": "preferredFieldOfStudy", "value": "Mechanical Engineering"} and would like to attend a university known for its strong engineering programs in the region
+    - I'm searching for affordable language courses in Galway City
+    - Do you have any recommendations for language schools or institutes that offer quality language instruction at an affordable price in Galway?
+    - What are the options for studying history in County Wexford?
+    - I'm fascinated by Irish history and would love to study history in a location known for its historical significance
+    - I'm looking for business management programs in Dublin City
+    - Which universities in Dublin offer comprehensive business management education and have a strong reputation for producing successful business professionals?
+    - Can you suggest any reputable film schools in County Clare?
+    - I'm interested in pursuing a degree in filmmaking and would like to attend a school with a strong film program in the picturesque county of Clare
+    - What are the best universities in Sligo for studying creative writing?
+    - I have a passion for writing and would like to attend a university with a strong creative writing program in Sligo
+    - Are there any affordable healthcare programs in County Meath?
+    - I'm interested in pursuing a healthcare degree and would like to find affordable options that provide quality healthcare education
+    - I'm searching for architecture programs in County Kilkenny
+    - Can you recommend any institutes or universities in Kilkenny that offer comprehensive architecture education and have a strong focus on sustainable design?
+    - What are the options for studying psychology in County Louth?
+    - I'm interested in pursuing a degree in psychology and would like to explore opportunities in Louth known for its diverse psychological research and clinical practice
+    - Can you suggest any reputable music production schools in County Cavan?
+    - I'm passionate about music production and would like to attend a school that offers specialized programs and hands-on training in music production
+    - I'm looking for agriculture programs in County Roscommon
+    - Which universities or institutes in Roscommon offer comprehensive agriculture education and have a strong focus on sustainable farming practices?
+    - Can you recommend any renowned culinary schools in County Kerry?
+    - I'm passionate about culinary arts and would like to pursue my studies in a location known for its culinary traditions
+    - What are the options for studying marine biology in Galway?
+    - I'm fascinated by marine life and would love to attend a university in Galway known for its marine biology programs and proximity to the Atlantic Ocean
+    - I'm looking for fashion design programs in Dublin
+    - Which universities or colleges in Dublin offer comprehensive fashion design education and have a strong reputation in the fashion industry?
+    - Can you suggest any reputable music therapy programs in Ireland?
+    - I'm interested in pursuing a degree in music therapy and would like to explore opportunities in institutions that offer accredited music therapy programs
+    - I'm searching for sustainable energy programs in County Cork
+    - Which universities or institutes in Cork offer comprehensive education in sustainable energy and renewable resources?
+    - What are the options for studying archaeology and heritage management in County Mayo?
+    - I'm fascinated by archaeology and would like to learn more about the preservation and management of historical sites
+    - I'm interested in pursuing a degree in sports science
+    - Can you recommend any universities or colleges in Ireland that offer reputable sports science programs with a focus on exercise physiology and performance analysis?
+    - Can you suggest any reputable animation schools in Ireland?
+    - I'm passionate about animation and would like to attend a school that offers hands-on training and opportunities to collaborate with industry professionals
+    - What are the options for studying hospitality management in County Kerry?
+    - I'm interested in pursuing a career in the hospitality industry and would like to attend a school with a strong hospitality management program in the region
+    - I'm looking for sustainable agriculture programs in Ireland
+    - Which universities or institutes offer comprehensive education in sustainable farming practices and organic agriculture?
+    - Can you recommend any renowned creative writing programs in Ireland?
+    - I'm passionate about writing and would like to attend a program that nurtures creativity and provides opportunities for publication and literary events
+    - What are the best universities in Ireland for studying computer engineering?
+    - I'm interested in pursuing a degree in computer engineering
+    - I would like to attend a university with a strong computer engineering department
+    - I'm searching for sustainable tourism programs in County Galway
+    - Can you suggest any universities or institutes in Galway that offer education in sustainable tourism management and responsible travel practices?
+    - Can you recommend any reputable film production schools in Ireland?
+    - I'm interested in pursuing a career in film production
+    - I would like to attend a school with state-of-the-art facilities in film production and experienced faculty
+    - I'm looking for entrepreneurship programs in Dublin
+    - Which universities or colleges in Dublin offer comprehensive entrepreneurship education and provide resources and mentorship for aspiring entrepreneurs?
+    - What are the options for studying traditional Irish music in County Clare?
+    - I'm passionate about traditional Irish music and would like to immerse myself in the rich musical heritage of the region
+    - I'm interested in pursuing a degree in biochemistry
+    - Can you recommend any universities or colleges in Ireland that offer reputable biochemistry programs with research opportunities?
+    - Can you suggest any renowned drama schools in Ireland?
+    - I'm passionate about acting and would like to attend a school that offers rigorous training and opportunities for stage and screen performances
+    - What are the options for studying renewable energy engineering in Ireland?
+    - I'm interested in sustainable energy solutions and would like to attend a university or institute with a strong focus on renewable energy technologies
+    - I'm looking for sports management programs in Ireland
+    - Which universities or institutes offer comprehensive education in sports management, including courses in sports marketing, event planning, and athlete management?
+- intent: change_slot_preferredFieldOfStudy
+  examples: |
+    - I want to change the field of study
+    - Could you please change the field
+    - Can I try with a different study field
+    - Can I try with another field of study
+    - I want to change my field of study to Computer Engineering
+    - Let's update my preferred field of study to Psychology
+    - Can I modify my study to Business Management?
+    - I'm considering changing my studies field to Environmental Science
+    - Please change my preferred field of study to Economics
+    - I want to update my preferred field of study to Biomedical Engineering
+    - Let's change my field of study to Fine Arts
+    - Can I modify my field to Political Science?
+    - I'm considering changing my study to Data Science
+    - Please update my preferred field of study to Computer Science
+- intent: change_slot_preferredModeOfStudy
+  examples: |
+    - I want to change the mode of study
+    - Could you please change the study mode
+    - Can I try with a different study mode
+    - Can I try with another mode of study
+    - I want to switch my mode of study to online
+    - Let's update my study mode to offline
+    - Can I modify my preferred mode of study to blended learning?
+    - I'm considering changing my preferred mode of study to on-campus
+    - Please change my preferred mode of study to part-time
+    - I want to switch my mode of study to online learning
+    - Let's update my preferred mode of study to in-person classes
+    - Can I modify my to a fully remote option?
+    - I'm considering changing my mode of study to part-time on-campus
+    - Please change to a hybrid approach
+- intent: change_slot_preferredLocation
+  examples: |
+    - I want to change the location
+    - Could you please change the county
+    - Can I try with a different county
+    - Can I try with another location
+    - I want to change my location to Galway
+    - Let's update my location to Dublin
+    - Can I modify my preferred location to Cork?
+    - I'm considering changing my preferred location to Limerick
+    - Please change my preferred location to a rural area
+    - I want to change my location to Cork
+    - Let's update my preferred location to Galway
+    - Can I modify my location to Dublin?
+    - I'm considering changing my location to Limerick
+- intent: change_slot_timeAvailability
+  examples: |
+    - I want to change to full time
+    - Could you please change to part time
+    - Can I try with full time
+    - Can I try with part time
+    - I want to switch my time availability to part time
+    - Let's update to full time
+    - Can I modify my time availability to evenings and weekends?
+    - I'm considering changing my time availability to flexible
+    - Please change my time availability to limited hours
+    - I want to update my time availability to fulltime study
+    - Let's change my time availability to parttime
+    - Can I modify my time availability to evenings and weekends only?
+    - I'm considering changing my time availability to weekdays only
+    - Please update my time availability to flexible hours
+- intent: change_slot_budget
+  examples: |
+    - I want to change my budget to $15,000
+    - Let's update my budget to $25,000
+    - Can I modify my budget to $12,000?
+    - I'm considering changing my budget to $18,000
+    - Please change my budget to $20,000
+    - I want to switch my budget to $30,000
+    - Let's update my budget to $35,000
+    - Can I modify my budget to $40,000?
+    - I'm considering changing my budget to $25,000
+    - Please change my budget to $28,000
+- intent: ask_fallback
+  examples: |
+    - I am loosing my mind
+    - You spin my head right round
+- intent: thank
+  examples: |
+    - Thank you
+    - Thanks
+    - I appreciate it
+    - That was helpful
+    - Thanks for your time
+- intent: chitchat_how_are_you
+  examples: |
+    - How are you?
+    - How's it going?
+    - How are things?
+    - How's your day?
+    - How's life?
+- intent: chitchat_laugh
+  examples: |
+    - Hahaha
+    - LOL
+    - That's funny!
+    - You're hilarious
+    - LMAO
+- intent: chitchat_love
+  examples: |
+    - I love you
+    - You're the best
+    - You're awesome
+    - I adore you
+    - You're amazing
+- intent: chitchat_age
+  examples: |
+    - How old are you?
+    - When were you born?
+    - What's your age?
+    - Are you young or old?
+    - Do you age?
+- intent: chitchat_sorry
+  examples: |
+    - I'm sorry
+    - Sorry about that
+    - My apologies
+    - I didn't mean to
+    - Please forgive me
+- intent: chitchat_bored
+  examples: |
+    - I'm bored
+    - I have nothing to do
+    - I'm feeling bored
+    - What can I do for fun?
+    - Give me some entertainment
+- intent: chitchat_news
+  examples: |
+    - Any interesting news?
+    - Tell me the latest news
+    - What's happening in the world?
+    - Can you give me a news update?
+    - Any breaking news?
+- intent: chitchat_help
+  examples: |
+    - I need help
+    - Can you assist me?
+    - Help me, please
+    - I'm stuck, what should I do?
+    - Can you give me some guidance?
+- synonym: Under graduate
+  examples: |
+    - undergraduate
+    - bachelor's
+    - baccalaureate
+    - four-year degree
+    - post-secondary degree
+    - college
+    - undergrad
+    - four year degree
+    - B.A
+    - B.S
+    - B.E
+    - B.B.A
+    - B.Ed
+    - B.Sc
+    - first degree
+    - post secondary diploma
+    - college qualification
+    - university diploma
+    - academic qualification
+    - bachelors
+    - bachelor
+    - bahelor
+    - bacelor
+    - bahelors
+    - bacelors
+- synonym: Computer science
+  examples: |
+    - computer science
+    - CSC
+    - C.SC
+- synonym: Management
+  examples: |
+    - management
+- synonym: High school
+  examples: |
+    - high school
+    - secondary school
+    - secondary education
+    - upper school
+    - senior school
+    - college preparatory school
+    - gymnasium
+    - lyceum
+    - sixth form
+    - vocational school
+    - academy
+    - institute degree
+    - lycee
+    - senior high
+    - junior-senior high school
+    - comprehensive school
+    - public school
+    - private school
+    - magnet school
+    - preparatory school
+    - preparatory high school
+    - institute
+    - senior high school
+    - magnet
+- synonym: Post graduate
+  examples: |
+    - master's
+    - masters
+    - postgraduate
+    - M.A
+    - M.S
+    - M.B.A
+    - M.Ed
+    - M.Sc
+    - M.Tech
+    - M.F.A
+    - M.Com
+    - M.S.N
+    - M.Arch
+    - M.P.H
+    - M.P.A
+    - M.L.I.S
+    - M.P.T
+    - M.S.W
+    - M.Phil
+    - Magister
+    - second-cycle
+    - postgraduate-level
+    - MA
+    - MS
+    - advanced degree
+    - MEd
+    - Master of Science
+    - MTech
+    - MFA
+    - MCom
+    - MSN
+    - MArch
+    - MPH
+    - MPA
+    - MLIS
+    - MPT
+    - MSW
+    - second cycle
+    - postgraduate level
+    - MBA
+    - MSc
+    - MPhil
+- synonym: PhD
+  examples: |
+    - Doctor of Philosophy
+    - DPhil
+    - Ph.D
+    - doctoral program
+    - Doctorate
+    - doctoral
+    - Doctoral
+    - doctorate
+- synonym: Biology
+  examples: |
+    - biology
+    - microbiology
+- synonym: Chemistry
+  examples: |
+    - chemistry
+    - biochemistry
+- synonym: Physics
+  examples: |
+    - physics
+    - astrophysics
+    - biophysics
+- synonym: Environmental science
+  examples: |
+    - environmental science
+    - environmental
+- synonym: Astronomy
+  examples: |
+    - astronomy
+    - astrochemistry
+    - cosmology
+    - astroinformatics
+- synonym: Geology
+  examples: |
+    - geology
+    - petrology
+    - geomorphology
+- synonym: Neuroscience
+  examples: |
+    - neuroscience
+    - neuropsychology
+- synonym: Information Technology
+  examples: |
+    - IT
+    - information technology
+- synonym: Software
+  examples: |
+    - software
+- synonym: Data Science
+  examples: |
+    - data analysis
+    - machine learning
+    - data
+    - data visualization
+    - natural language processing
+    - data analytics
+    - data mining
+- synonym: Artificial Intelligence
+  examples: |
+    - neural networks
+    - computer vision
+    - AI
+- synonym: Robotics
+  examples: |
+    - robotic
+    - robot
+    - robots
+- synonym: Cybersecurity
+  examples: |
+    - security
+    - secure algorithms
+    - cybercrime
+    - security policies
+    - secure software
+    - cyber
+    - cyber security
+- synonym: Civil Engineering
+  examples: |
+    - Civil Engg
+    - civil engg
+    - Civil engineering
+    - civil engineering
+    - civil Engg
+    - civil Engineering
+- synonym: Mechanical Engineering
+  examples: |
+    - Mechanical Engg
+    - mechanical engineering
+    - mech engg
+    - Mech engg
+    - Mechanical engg
+    - mechanical engg
+    - mechanical Engineering
+- synonym: Electrical Engineering
+  examples: |
+    - Electrical Engg
+    - electrical engg
+    - Electrical engineering
+    - electrical engineering
+    - electrical Engg
+    - electrical Engineering
+- synonym: Chemical Engineering
+  examples: |
+    - Chemical Engg
+    - che engg
+    - Che engg
+    - Chemical engg
+    - chemical engg
+    - chemical Engineering
+    - chemical engineering
+- synonym: Aerospace Engineering
+  examples: |
+    - Aerospace Engg
+    - aerospace engg
+    - Aerospace engineering
+    - aerospace engineering
+    - aerospace Engg
+    - aerospace Engineering
+- synonym: Biomedical Engineering
+  examples: |
+    - Biomedical Engg
+    - biomedical engg
+    - Biomedical engineering
+    - biomedical engineering
+    - biomedical Engg
+    - biomedical Engineering
+- synonym: Industrial Engineering
+  examples: |
+    - Industrial Engg
+    - industrial engg
+    - Industrial engineering
+    - industrial engineering
+    - industrial Engg
+    - industrial Engineering
+- synonym: Pure Mathematics
+  examples: |
+    - Pure Math
+- synonym: Music
+  examples: |
+    - music
+- synonym: Law
+  examples: |
+    - law
+- synonym: Environmental
+  examples: |
+    - Environmental Science
+- synonym: Online
+  examples: |
+    - home
+    - online
+- synonym: Offline
+  examples: |
+    - offline
+    - classroom
+- synonym: Any
+  examples: |
+    - both
+    - no preference
+    - flexible
+    - don't have a fixed preference
+    - open
+    - receptive to various
+    - flexible schedule
+    - anything
+- synonym: Antrim
+  examples: |
+    - Antrim's
+- synonym: Armagh
+  examples: |
+    - Armagh's
+- synonym: Derry
+  examples: |
+    - Londonderry
+    - Derry's
+    - Londonderry's
+- synonym: Down
+  examples: |
+    - Down's
+- synonym: Fermanagh
+  examples: |
+    - Fermanagh's
+- synonym: Tyrone
+  examples: |
+    - Tyrone's
+- synonym: Full time
+  examples: |
+    - full time
+    - Full-time
+- synonym: Part time
+  examples: |
+    - part time
+    - Part-time
+- synonym: Theatre
+  examples: |
+    - acting
+    - drama
