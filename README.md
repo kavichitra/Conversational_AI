@@ -28,7 +28,7 @@
 
 1. Open credentials.yml copy the value of verify from facebook - <copy value 2><br>
    facebook:<br>
-    verify: <copy this value><br>
+    verify: <copy_this_value><br>
 
 2. Navigate to the page "https://developers.facebook.com/"
 3. Login using meta developer credentials
