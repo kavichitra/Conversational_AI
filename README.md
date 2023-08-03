@@ -21,7 +21,8 @@
    ngrok http 5005<br>
 
 6. Copy the Forwarding URL value - <copy value 1><br>
-   Forwarding                    https://****-**-***-**-**.ngrok.io<br>
+   Forwarding                    <https://****-**-***-**-**.ngrok.io><br>
+   <https://****-**-***-**-**.ngrok.io> --> Copy this value<br>
 
 ## Facebook integration
 
