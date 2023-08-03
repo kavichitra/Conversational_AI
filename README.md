@@ -1,6 +1,6 @@
 # Conversational_AI
  
-1. Install all the dependencies provided in requirements.txt
+1. Install all the dependencies provided in requirements.txt\n
    -- Command line for windows cmd --
    pip install -r requirements.txt
 
